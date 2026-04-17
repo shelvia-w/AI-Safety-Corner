@@ -1170,6 +1170,15 @@ button {
 
   .zones-grid { grid-template-columns: 1fr; }
 
+  .signals-grid {
+    flex-direction: column;
+  }
+
+  .signal {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
 }
 
 /* ─── Scrollbar ────────────────────────────────────────────── */

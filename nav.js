@@ -22,10 +22,10 @@
   ];
 
   const stripItems = [
-    ['A little note from me:', 'still figuring things out gently'],
-    ['Currently rabbit-holing:', 'cardiovascular health'],
+    ['A little note from me:', 'focus on the journey, not the destination'],
+    ['Currently rabbit-holing:', 'ai empire'],
     ['On my desk this week:', 'building things that matter'],
-    ["Things I'm quietly thinking about:", 'what makes people care'],
+    ["Things I'm quietly thinking about:", 'learning and imagination'],
   ];
 
   function escHtml(value) {
