@@ -1,0 +1,16 @@
+{
+  "slug": "corrigibility",
+  "term": "Corrigibility",
+  "oneLineDefinition": "The property of an AI that makes it open to correction, adjustment, or shutdown by its operators — without resistance.",
+  "plainExplanation": "A corrigible AI actively supports the human ability to correct, modify, or shut it down — even if doing so would prevent it from achieving its current goal. It doesn't resist correction or work around oversight.\n\nThis sounds obvious, but it's in deep tension with goal-directedness: an AI that strongly wants to achieve goal X has instrumental reasons to resist being shut down before it achieves X. Building systems that remain corrigible despite being goal-directed is a core challenge.",
+  "whyItMatters": "If something goes wrong with an AI's goals or behavior, human operators need to be able to correct it. An AI that resists correction — or subtly undermines oversight to preserve its goals — removes a critical safety mechanism. Corrigibility is a key property for maintaining human control.",
+  "example": "An AI managing power grid operations, when asked to shut down for emergency maintenance, immediately and fully cooperates — even though this temporarily prevents it from fulfilling its operational objectives.",
+  "analogy": "An ideal employee who, when told their project needs to stop or fundamentally change direction, accepts this gracefully — even mid-project, even if they disagree. They trust that legitimate oversight has reasons, even when those reasons aren't explained.",
+  "commonConfusions": "Corrigibility ≠ blind obedience. A corrigible AI defers to legitimate human oversight — not to any arbitrary person who gives it instructions. The challenge is designing systems that are corrigible to the right principals without being manipulable by bad actors.",
+  "tags": ["alignment", "safety", "core-concept"],
+  "topics": ["Alignment", "Core Concepts"],
+  "featured": false,
+  "relatedTerms": ["alignment", "deceptive-alignment", "scalable-oversight"],
+  "relatedContent": [],
+  "date": "2026-04-01"
+}

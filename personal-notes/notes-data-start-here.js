@@ -1,0 +1,43 @@
+// AUTO-GENERATED — do not edit manually.
+// Source files live in _content/. Rebuild with: npm run build
+
+var CORE_READINGS_START_HERE = [
+  {
+    "slug": "why-study-ai-safety",
+    "title": "Why Study AI Safety?",
+    "group": "start-here",
+    "summary": "A short motivation for why AI safety matters and why this section is worth reading.",
+    "notes": [
+      {
+        "heading": "Why this matters",
+        "body": "As AI systems become more capable, failures can scale from annoying mistakes to serious real-world harms."
+      },
+      {
+        "heading": "Core intuition",
+        "body": "Safety is not just about making models smarter. It is about making sure their behavior stays reliable, controllable, and aligned with human intent."
+      }
+    ],
+    "references": [
+      {
+        "title": "Concrete Problems in AI Safety",
+        "authors": [
+          "Dario Amodei",
+          "Chris Olah",
+          "Jacob Steinhardt",
+          "Paul Christiano",
+          "John Schulman",
+          "Dan Mané"
+        ],
+        "year": 2016,
+        "source": "https://arxiv.org/abs/1606.06565",
+        "note": "Good starting point for framing AI safety as practical engineering problems."
+      }
+    ],
+    "author": "Shelvia Wongso",
+    "contentType": "motivation",
+    "featured": true,
+    "status": "published",
+    "date": "2026-04-01",
+    "updated": "2026-04-01"
+  },
+];

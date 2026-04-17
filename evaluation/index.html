@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23f5c842'>◈</text></svg>" />
+  <title>Evaluation</title>
+  <meta
+    name="description"
+    content="How do we measure AI safety? Benchmarks, red teaming, dangerous capability tests, and behavioral evaluations — explained clearly for every level."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../styles.css?v=366f96b8dd" />
+  <link rel="stylesheet" href="evaluation.css?v=ba7aa90c05" />
+</head>
+
+<body>
+  <!-- Ambient canvas -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <!-- Top nav, injected by nav.js -->
+  <div id="site-nav"></div>
+  <script src="../nav.js?v=74bfacc0e2"></script>
+
+  <div class="ev-page">
+    <!-- Hero -->
+    <header class="ev-hero">
+      <div class="ev-hero-inner">
+        <div class="ev-eyebrow">
+          <span class="ev-eyebrow-glyph" aria-hidden="true">◈</span>
+          <span class="ev-eyebrow-zone">IV</span>
+          <span class="ev-eyebrow-sep" aria-hidden="true">·</span>
+          <span class="ev-eyebrow-label">Evaluation Tools</span>
+        </div>
+
+        <h1 class="ev-hero-title">Evaluation</h1>
+
+        <p class="ev-hero-subtitle">
+          Explore the evaluation tools used to test the safety of AI systems.
+          Methods, datasets, and benchmarks worth knowing.
+        </p>
+
+        <div class="ev-stats">
+          <span class="ev-stat">
+            <span class="ev-stat-dot" aria-hidden="true"></span>
+            <span id="totalCount">0 entries</span>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sticky controls -->
+    <div class="ev-controls" role="search" aria-label="Filter evaluation entries">
+      <div class="ev-controls-inner">
+        <div class="ev-search-wrap">
+          <span class="ev-search-icon" aria-hidden="true">⌕</span>
+          <input
+            type="search"
+            id="evSearch"
+            class="ev-search"
+            placeholder="Search evaluations…"
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Search evaluation entries"
+          />
+        </div>
+
+        <div class="ev-filter-group" role="group" aria-label="Filter by evaluation type">
+          <button
+            class="ev-diff-pill ev-diff-pill--benchmark"
+            type="button"
+            data-evtype="Benchmark"
+            aria-pressed="false"
+          >
+            Benchmark
+          </button>
+          <button
+            class="ev-diff-pill ev-diff-pill--method"
+            type="button"
+            data-evtype="Method"
+            aria-pressed="false"
+          >
+            Method
+          </button>
+          <button
+            class="ev-diff-pill ev-diff-pill--dataset"
+            type="button"
+            data-evtype="Dataset"
+            aria-pressed="false"
+          >
+            Dataset
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Topic filters -->
+    <div class="ev-filter-row" aria-label="Filter by topic">
+      <div class="ev-filter-row-inner">
+        <span class="ev-filter-row-label">Topics</span>
+        <div
+          class="ev-filter-group"
+          id="evTopicFilters"
+          role="group"
+          aria-label="Filter by topic"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Results count -->
+    <div class="ev-results-line">
+      <span
+        id="resultsCount"
+        class="ev-results-count"
+        aria-live="polite"
+        aria-atomic="true"
+      ></span>
+      <button
+        id="evClearBtn"
+        class="ev-clear-btn"
+        type="button"
+        aria-label="Clear all filters"
+      >
+        Clear filters ✕
+      </button>
+    </div>
+
+    <!-- Results grid -->
+    <div class="ev-body">
+      <div class="ev-body-inner">
+        <div id="evGrid" class="ev-grid" role="list" aria-label="Evaluation entries"></div>
+
+        <div id="evEmpty" class="ev-empty" role="status" aria-live="polite">
+          <div class="ev-empty-glyph" aria-hidden="true">◈</div>
+          <h2 class="ev-empty-title">No entries found</h2>
+          <p class="ev-empty-body">
+            Try a different search or clear the filters to browse everything.
+          </p>
+          <button id="emptyResetBtn" class="ev-empty-reset" type="button">
+            Clear &amp; browse all
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span class="copyright-line">
+        <span class="copyright-mark">©</span>
+        <span>2026 AI Safety Corner</span>
+      </span>
+    </div>
+  </footer>
+
+  <!-- About drawer injected by nav.js -->
+
+  <!-- Scripts -->
+  <script src="../main.js?v=3ce3eb6960"></script>
+  <script src="eval-data.js?v=7b9455c400"></script>
+  <script src="eval-index.js?v=ba2a9d466d"></script>
+</body>
+</html>

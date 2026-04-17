@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23f03e8a'>⚠</text></svg>" />
+  <title>Loading... - Failure Cases · AI Safety Corner</title>
+  <meta name="description" content="Failure Cases" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../styles.css?v=366f96b8dd" />
+  <link rel="stylesheet" href="failures.css?v=f8fa4c6578" />
+</head>
+
+<body>
+  <!-- Ambient canvas -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <!-- Top nav injected by nav.js -->
+  <div id="site-nav"></div>
+  <script src="../nav.js?v=74bfacc0e2"></script>
+
+  <main class="fc-detail-page">
+    <div id="caseNotFound" class="fc-not-found" style="display: none;">
+      <div class="fc-not-found-glyph" aria-hidden="true">?</div>
+      <h1 class="fc-not-found-title">Case not found</h1>
+      <p class="fc-not-found-body">
+        This case does not exist yet, or the link may be wrong.
+      </p>
+      <a href="./index.html" class="fc-not-found-link">&larr; Back to all failure cases</a>
+    </div>
+
+    <div id="caseBody">
+      <article class="fc-case-inner">
+        <nav class="fc-case-back" aria-label="Return to index">
+          <a href="./index.html" class="fc-case-back-link">Failure Cases</a>
+        </nav>
+
+        <header class="fc-case-header">
+          <div class="fc-case-eyebrow">
+            <span class="fc-case-zone-label">
+              <span class="fc-case-zone-glyph" aria-hidden="true">III</span>
+              Case Files
+            </span>
+            <span id="caseRiskBadge"></span>
+            <span id="caseStatusBadge"></span>
+          </div>
+
+          <h1 class="fc-case-title" id="caseTitle">-</h1>
+
+          <div class="fc-case-meta-row" id="caseMetaRow">
+            <div class="fc-meta-item">
+              <span class="fc-meta-label">System</span>
+              <span class="fc-meta-value" id="metaSystem">-</span>
+            </div>
+            <div class="fc-meta-item">
+              <span class="fc-meta-label">Organization</span>
+              <span class="fc-meta-value" id="metaOrg">-</span>
+            </div>
+            <div class="fc-meta-item">
+              <span class="fc-meta-label">Date</span>
+              <span class="fc-meta-value" id="metaDate">-</span>
+            </div>
+          </div>
+
+          <div class="fc-detail-reading" id="fcReadingTime"></div>
+        </header>
+
+        <div class="fc-summary">
+          <div class="fc-summary-label">Summary</div>
+          <p class="fc-summary-text" id="caseSummary">-</p>
+        </div>
+
+        <section class="fc-section" id="sectionWhatHappened">
+          <h2 class="fc-section-label">What Happened</h2>
+          <div class="fc-prose" id="caseWhatHappened"></div>
+        </section>
+
+        <section class="fc-section" id="sectionWhyMatters">
+          <h2 class="fc-section-label">Why It Matters</h2>
+          <div class="fc-prose" id="caseWhyMatters"></div>
+        </section>
+
+        <section class="fc-section" id="sectionCauses">
+          <h2 class="fc-section-label">Likely Causes</h2>
+          <ul class="fc-list" id="caseCauses"></ul>
+        </section>
+
+        <section class="fc-section" id="sectionLessons">
+          <h2 class="fc-section-label">Lessons</h2>
+          <ul class="fc-list fc-list--lessons" id="caseLessons"></ul>
+        </section>
+
+        <section class="fc-section" id="sectionMitigations">
+          <h2 class="fc-section-label">Mitigations &amp; Responses</h2>
+          <ul class="fc-list" id="caseMitigations"></ul>
+        </section>
+
+        <section class="fc-section" id="sectionSources">
+          <h2 class="fc-section-label">Sources</h2>
+          <div class="fc-sources" id="caseSources"></div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span class="copyright-line">
+        <span class="copyright-mark">&copy;</span>
+        <span>2026 AI Safety Corner</span>
+      </span>
+    </div>
+  </footer>
+
+  <!-- About drawer injected by nav.js -->
+
+  <script src="../main.js?v=3ce3eb6960"></script>
+  <script src="failures-data.js?v=00daa8b62b"></script>
+  <script src="failures-case.js?v=bce9a53dcb"></script>
+</body>
+</html>

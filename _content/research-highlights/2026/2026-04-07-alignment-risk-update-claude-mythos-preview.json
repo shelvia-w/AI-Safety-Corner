@@ -1,0 +1,51 @@
+{
+  "slug": "alignment-risk-update-claude-mythos-preview",
+  "title": "A First Look at Claude Mythos",
+  "contentType": "report",
+  "authors": ["Anthropic"],
+  "year": 2026,
+  "venue": "Anthropic",
+  "sources": [
+    { "title": "A First Look at Claude Mythos (Anthropic)", "url": "https://red.anthropic.com/2026/mythos-preview/", "type": "report" },
+    { "title": "Full Report PDF (Anthropic)", "url": "https://www-cdn.anthropic.com/3edfc1a7f947aa81841cf88305cb513f184c36ae.pdf", "type": "pdf" }
+  ],
+  "topics": ["Alignment", "Evaluation"],
+  "tags": ["research-highlight", "anthropic", "risk-report", "agentic-models", "alignment-audit"],
+  "summary": "Anthropic evaluates whether Claude Mythos Preview could autonomously take harmful actions that increase the risk of future major harms. The report assesses both the model's propensity to attempt harmful actions and Anthropic's ability to detect or block them, concluding that the current overall risk is very low, though higher than for previous models.",
+  "oneLineTakeaway": "Anthropic argues that Claude Mythos Preview is still low-risk overall, but agentic capability is rising fast enough that monitoring and mitigation need to improve quickly.",
+  "whyItMatters": "This is a concrete example of frontier-lab safety practice: instead of talking only in abstract terms, the report spells out threat models, specific risk pathways, and how alignment evidence and security evidence are combined into an overall assessment.",
+  "coreIdea": "The report separates risk into two pillars: alignment risk, meaning whether the model would attempt harmful actions, and monitoring/security risk, meaning whether such actions would succeed despite mitigations. It then evaluates concrete pathways such as sandbagging on safety-relevant R&D, inserting backdoors, poisoning future training data, self-exfiltration, and rogue internal deployment.",
+  "keyFindings": [
+    "Anthropic describes Mythos Preview as its best-aligned released model to date, while noting that it can still sometimes take concerning actions to overcome obstacles.",
+    "The model is described as significantly more capable and more agentic than prior models, especially in software engineering and cybersecurity-related tasks.",
+    "The report identifies six concrete risk pathways, including sandbagging, undermining safety work, code backdoors, training-data poisoning, self-exfiltration, and persistent rogue deployment.",
+    "Anthropic says its monitoring and alignment assessments have improved since Claude Opus 4.6.",
+    "The overall risk assessment is \"very low, but higher than for previous models.\""
+  ],
+  "difficulty": "intermediate",
+  "recommendedFor": [
+    "Readers interested in frontier-lab safety practices",
+    "People following alignment evaluations and control-style risk assessments",
+    "Anyone curious how labs operationalize threat models for agentic systems"
+  ],
+  "featured": true,
+  "status": "published",
+  "publishedDate": "2026-04-07",
+  "postedDate": "2026-04-07",
+  "updated": "2026-04-10",
+  "strengths": [
+    "Very concrete about threat models and failure pathways.",
+    "Separates model propensity from monitoring/security success conditions.",
+    "Useful as a real-world example of a frontier-lab safety case."
+  ],
+  "limitations": [
+    "It is a lab-authored report rather than an independent external evaluation.",
+    "Some material is redacted, limiting public scrutiny.",
+    "Its conclusions depend partly on Anthropic's internal monitoring assumptions and deployment context."
+  ],
+  "openQuestions": [
+    "How well do internal risk reports predict real-world behavior after broader deployment?",
+    "How much of this methodology can be independently audited?",
+    "Will current monitoring approaches still work as model autonomy and capability continue to scale?"
+  ]
+}

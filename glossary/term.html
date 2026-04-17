@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23ff8f6b'>❋</text></svg>" />
+  <title>Loading... - Glossary · AI Safety Corner</title>
+  <meta name="description" content="Glossary term explained clearly." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=366f96b8dd" />
+  <link rel="stylesheet" href="glossary.css?v=d80fb30785" />
+</head>
+<body>
+
+  <!-- ============================================================
+       AMBIENT CANVAS
+  ============================================================ -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <!-- ============================================================
+       TOP NAV (injected by nav.js)
+  ============================================================ -->
+  <div id="site-nav"></div>
+  <script src="../nav.js?v=74bfacc0e2"></script>
+
+  <!-- ============================================================
+       TERM PAGE
+  ============================================================ -->
+  <div class="term-page">
+
+    <!-- Not found state -->
+    <div id="termNotFound" class="term-not-found" style="display:none;">
+      <div class="term-not-found-glyph" aria-hidden="true">❋</div>
+      <h1 class="term-not-found-title">Term not found</h1>
+      <p class="term-not-found-body">
+        This term doesn't exist yet, or the link may be wrong.
+      </p>
+      <a href="./index.html" class="term-not-found-link">Back to the full glossary</a>
+    </div>
+
+    <!-- Term content -->
+    <main id="termBody" class="term-page-inner">
+      <a class="term-back-link" href="./index.html">Glossary</a>
+
+      <header class="term-header">
+        <div class="term-header-eyebrow">
+          <span class="term-header-zone">
+            <span class="zone-glyph-inline" aria-hidden="true">V</span>
+            Glossary
+          </span>
+        </div>
+
+        <h1 class="term-title" id="termTitle"></h1>
+
+        <div class="term-header-meta">
+          <span id="termReadingTime" class="term-reading-time"></span>
+        </div>
+      </header>
+
+      <div class="term-definition" role="doc-abstract">
+        <div class="term-definition-label">Definition</div>
+        <p class="term-definition-text" id="termDefinitionText">—</p>
+      </div>
+
+      <div class="term-body">
+        <section class="term-section-block">
+          <h2 class="term-section-label">Plain Explanation</h2>
+          <div class="term-prose" id="termPlain"></div>
+        </section>
+
+        <section class="term-section-block term-section-block--matters">
+          <h2 class="term-section-label">Why It Matters</h2>
+          <div class="term-prose" id="termMatters"></div>
+        </section>
+
+        <section class="term-section-block term-section-block--example">
+          <h2 class="term-section-label">Example</h2>
+          <div class="term-prose" id="termExample"></div>
+        </section>
+
+        <section class="term-section-block term-section-block--analogy" id="termAnalogyBlock">
+          <h2 class="term-section-label">An Analogy</h2>
+          <div class="term-prose" id="termAnalogy"></div>
+        </section>
+
+        <section class="term-section-block term-section-block--confusion">
+          <h2 class="term-section-label">Common Confusion</h2>
+          <div class="term-prose" id="termConfusion"></div>
+        </section>
+      </div>
+    </main>
+
+  </div><!-- /.term-page -->
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span class="copyright-line">
+        <span class="copyright-mark">©</span>
+        <span>2026 AI Safety Corner</span>
+      </span>
+    </div>
+  </footer>
+
+  <!-- About drawer injected by nav.js -->
+
+  <!-- ============================================================
+       SCRIPTS
+  ============================================================ -->
+  <script src="../main.js?v=3ce3eb6960"></script>
+  <script src="glossary-data.js?v=4899776988"></script>
+  <script src="glossary-term.js?v=aa5fe9e49d"></script>
+</body>
+</html>

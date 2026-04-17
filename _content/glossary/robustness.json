@@ -1,0 +1,16 @@
+{
+  "slug": "robustness",
+  "term": "Robustness",
+  "oneLineDefinition": "How reliably an AI system maintains safe, intended behavior when faced with unusual or adversarial inputs.",
+  "plainExplanation": "A robust model doesn't just work well on the cases it was trained on — it holds up when things get weird. This means handling unfamiliar inputs gracefully, resisting adversarial manipulation, and failing safely rather than catastrophically when something unexpected happens.\n\nRobustness exists on a spectrum: a model can be more or less robust to different types of perturbation — noise, distribution shift, adversarial examples, or novel situations.",
+  "whyItMatters": "Real-world deployment exposes AI systems to inputs far beyond what the training set contained. A model that works perfectly in the lab but fails unpredictably in production can cause real harm. The more safety-critical the application, the more robustness matters.",
+  "example": "An autonomous vehicle's vision system trained primarily on clear daytime driving. In heavy rain, fog, or unusual lighting, it might classify objects incorrectly — with potentially dangerous results. A robust system would handle edge cases reliably or fail safely.",
+  "analogy": "A bridge designed not just for typical traffic conditions but for earthquakes, floods, and unusual loads — engineered to perform safely at the edges, not just on average.",
+  "commonConfusions": "Robustness ≠ accuracy. A model can be highly accurate on its test set but brittle at distribution edges. Robustness is specifically about behavior under pressure — adversarial conditions, novel inputs, distribution shift.",
+  "tags": ["safety", "core-concept", "evaluation"],
+  "topics": ["Safety Techniques", "Evaluation"],
+  "featured": false,
+  "relatedTerms": ["red-teaming", "jailbreak", "interpretability"],
+  "relatedContent": [],
+  "date": "2026-04-01"
+}

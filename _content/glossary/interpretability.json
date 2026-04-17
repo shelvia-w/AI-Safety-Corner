@@ -1,0 +1,18 @@
+{
+  "slug": "interpretability",
+  "term": "Interpretability",
+  "oneLineDefinition": "The ability to understand what's actually happening inside an AI model — why it makes the decisions it makes.",
+  "plainExplanation": "Modern neural networks are often described as \"black boxes.\" They take inputs and produce outputs, but the internal processing is opaque. Interpretability research tries to open that box — understanding which features a model relies on, what computations it performs, and why it makes specific predictions.\n\nThis ranges from simple approaches (visualizing which pixels a classifier focuses on) to sophisticated circuit-level analysis of how models implement specific behaviors.",
+  "whyItMatters": "Even if a model's outputs look correct, we can't fully trust it without understanding its reasoning. A model that appears to work might be doing so for the wrong reasons — reasons that won't hold up in novel situations. Interpretability is a prerequisite for deep trust.",
+  "example": "Researchers used interpretability techniques to discover that an image classifier had learned to detect \"grass in the background\" as a proxy feature for \"dog.\" The model worked well on its training set — but would fail on dogs indoors.",
+  "analogy": "The difference between a doctor who explains their diagnosis step by step and one who just says \"take this pill.\" Both might be right, but only one gives you the understanding needed to trust the process and catch mistakes.",
+  "commonConfusions": "Interpretability ≠ explainability. Explainability often means post-hoc explanations — simplified stories we tell about model decisions after the fact. Interpretability aims to understand the actual internal processes. A plausible-sounding explanation might not reflect how the model actually works.",
+  "tags": ["interpretability", "core-concept", "research-area"],
+  "topics": ["Interpretability", "Core Concepts"],
+  "featured": true,
+  "relatedTerms": ["robustness", "deceptive-alignment", "red-teaming"],
+  "relatedContent": [
+    { "type": "paper", "title": "Zoom In: An Introduction to Circuits", "href": "#" }
+  ],
+  "date": "2026-04-01"
+}

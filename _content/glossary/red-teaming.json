@@ -1,0 +1,16 @@
+{
+  "slug": "red-teaming",
+  "term": "Red Teaming",
+  "oneLineDefinition": "Adversarial testing where experts actively try to find ways an AI system can fail or be misused.",
+  "plainExplanation": "Red teaming borrows its name from military practice, where a \"red team\" simulates an adversary to test defenses. In AI safety, it's a structured process where testers actively try to elicit harmful outputs, find edge cases, or break safety measures — before real users (or real adversaries) do.\n\nRed teamers aren't testing average performance. They're specifically hunting for failures.",
+  "whyItMatters": "Complex AI systems have failure modes that can't be fully predicted from their training setup. Red teaming surfaces real-world problems before deployment, giving developers a chance to fix them. It's become a standard part of responsible AI release practices.",
+  "example": "Before releasing a major language model, a team of safety researchers spends weeks crafting prompts designed to get the model to produce dangerous instructions, reveal sensitive information, or behave in manipulative ways. Their findings shape what gets fixed before launch.",
+  "analogy": "Hiring a security firm to break into your own building before you move in — to find the weak points in locks, windows, and access systems that a real intruder might exploit.",
+  "commonConfusions": "Red teaming ≠ benchmarking or standard evaluation. Benchmarks measure average performance on defined tasks. Red teaming is adversarial and exploratory: testers are specifically trying to find failures, not measure typical behavior.",
+  "tags": ["safety", "evaluation", "adversarial"],
+  "topics": ["Safety Techniques", "Evaluation"],
+  "featured": false,
+  "relatedTerms": ["jailbreak", "robustness", "interpretability"],
+  "relatedContent": [],
+  "date": "2026-04-01"
+}

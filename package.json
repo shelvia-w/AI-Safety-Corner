@@ -1,0 +1,13 @@
+{
+  "name": "ai-safety-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Safety Field Guide — static site with content pipeline",
+  "scripts": {
+    "build": "node scripts/build-data.js",
+    "build:watch": "node --watch scripts/build-data.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

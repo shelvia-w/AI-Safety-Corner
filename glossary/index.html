@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23ff8f6b'>❋</text></svg>" />
+  <title>Glossary</title>
+  <meta name="description" content="Browse AI safety terms explained clearly, with examples and simple analogies." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=366f96b8dd" />
+  <link rel="stylesheet" href="glossary.css?v=d80fb30785" />
+</head>
+<body>
+
+  <!-- ============================================================
+       AMBIENT CANVAS
+  ============================================================ -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <!-- ============================================================
+       TOP NAV (injected by nav.js)
+  ============================================================ -->
+  <div id="site-nav"></div>
+  <script src="../nav.js?v=74bfacc0e2"></script>
+
+  <!-- ============================================================
+       GLOSSARY PAGE
+  ============================================================ -->
+  <div class="glossary-page">
+
+    <!-- Hero -->
+    <header class="glossary-hero">
+      <div class="glossary-hero-inner">
+        <div class="glossary-eyebrow">
+          <span class="glossary-eyebrow-glyph" aria-hidden="true">❋</span>
+          <span class="glossary-eyebrow-zone">V</span>
+          <span class="glossary-eyebrow-sep">·</span>
+          <span class="glossary-eyebrow-label">Key Terms</span>
+        </div>
+
+        <h1 class="glossary-hero-title"><em>Glossary</em></h1>
+
+        <p class="glossary-hero-subtitle">
+          Browse a growing collection of AI safety terms, explained clearly.<br />
+          A place to get familiar with the language of the field.
+        </p>
+
+        <div class="glossary-stats">
+          <span class="glossary-stat">
+            <span class="glossary-stat-dot" aria-hidden="true"></span>
+            <span id="glossaryTotalCount">12 terms</span>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Search controls -->
+    <div class="glossary-controls" role="search" aria-label="Search glossary terms">
+      <div class="glossary-controls-inner">
+        <div class="glossary-search-wrap">
+          <span class="glossary-search-icon" aria-hidden="true">⌕</span>
+          <input
+            type="search"
+            id="glossarySearch"
+            class="glossary-search"
+            placeholder="Search terms…"
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Search glossary terms"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Alphabet navigation -->
+    <div class="glossary-alphabet" role="navigation" aria-label="Browse by letter">
+      <div class="glossary-alphabet-inner" id="alphabetNav"></div>
+    </div>
+
+    <!-- Results -->
+    <main class="glossary-body">
+      <div class="glossary-body-inner">
+        <div class="glossary-results-line" id="glossaryResultsLine">
+          <span id="resultsCount" class="glossary-results-count" aria-live="polite" aria-atomic="true"></span>
+          <button id="glossaryClearBtn" class="glossary-clear-btn" type="button" aria-label="Clear all filters">
+            Clear filters
+          </button>
+        </div>
+
+        <div id="glossaryGrid" role="list" aria-label="Glossary terms"></div>
+
+        <div id="glossaryEmpty" class="glossary-empty" role="status" aria-live="polite">
+          <div class="empty-glyph" aria-hidden="true">❋</div>
+          <h2 class="empty-title">No terms found</h2>
+          <p class="empty-body">
+            Try a different search, or clear the filters to browse everything.
+          </p>
+          <button id="emptyResetBtn" class="empty-reset-btn" type="button">
+            Clear &amp; browse all
+          </button>
+        </div>
+      </div>
+    </main>
+
+  </div><!-- /.glossary-page -->
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span class="copyright-line">
+        <span class="copyright-mark">©</span>
+        <span>2026 AI Safety Corner</span>
+      </span>
+    </div>
+  </footer>
+
+  <!-- About drawer injected by nav.js -->
+
+  <!-- ============================================================
+       SCRIPTS
+  ============================================================ -->
+  <script src="../main.js?v=3ce3eb6960"></script>
+  <script src="glossary-data.js?v=4899776988"></script>
+  <script src="glossary-index.js?v=95469d367b"></script>
+</body>
+</html>

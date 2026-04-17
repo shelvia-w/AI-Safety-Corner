@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23C7F36B'>⬡</text></svg>" />
+  <title>Personal Notes</title>
+  <meta name="description" content="A curated collection of personal notes on AI safety — foundational papers, agenda-setting essays, and key reports, explained clearly." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=366f96b8dd" />
+  <link rel="stylesheet" href="notes.css?v=c3697140c9" />
+</head>
+<body>
+
+  <!-- Ambient canvas -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <!-- Top navigation injected by nav.js -->
+  <div id="site-nav"></div>
+  <script src="../nav.js?v=74bfacc0e2"></script>
+
+  <!-- Personal notes page -->
+  <div class="cr-page">
+
+    <!-- Hero -->
+    <header class="cr-hero">
+      <div class="cr-hero-inner">
+
+        <div class="cr-eyebrow">
+          <span class="cr-eyebrow-glyph" aria-hidden="true">⬡</span>
+          <span class="cr-eyebrow-zone">II</span>
+          <span class="cr-eyebrow-sep">·</span>
+          <span class="cr-eyebrow-label">Foundations</span>
+        </div>
+
+        <h1 class="cr-hero-title">
+          Personal <em>Notes</em>
+        </h1>
+
+        <p class="cr-hero-subtitle">
+          Follow along as I document what I learn about AI safety in my notes.<br />
+          A helpful starting point for those looking to build stronger foundations.
+        </p>
+
+        <div class="cr-hero-stats">
+          <span class="cr-stat">
+            <span class="cr-stat-dot" aria-hidden="true"></span>
+            <span id="crTotalCount">8 notes</span>
+          </span>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Sticky controls -->
+    <div class="cr-controls" role="search" aria-label="Filter personal notes">
+      <div class="cr-controls-inner">
+
+        <!-- Search -->
+        <div class="cr-search-wrap">
+          <span class="cr-search-icon" aria-hidden="true">⌕</span>
+          <input
+            type="search"
+            id="crSearch"
+            class="cr-search"
+            placeholder="Search notes…"
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Search personal notes"
+          />
+        </div>
+
+        <!-- Content type filters -->
+        <div class="cr-filter-row" role="group" aria-label="Filter by content type">
+          <button class="cr-pill cr-pill--motivation" data-type="motivation">Motivation</button>
+          <button class="cr-pill cr-pill--learning" data-type="learning">Learning</button>
+          <button class="cr-pill cr-pill--research" data-type="research">Research</button>
+          <button class="cr-pill cr-pill--reflection" data-type="reflection">Reflection</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Results body -->
+    <div class="cr-body">
+      <div class="cr-body-inner">
+
+        <div class="cr-results-line">
+          <span id="crResultsCount" class="cr-results-count" aria-live="polite" aria-atomic="true"></span>
+          <button id="crClearBtn" class="cr-clear-btn" aria-label="Clear all filters">
+            Clear filters ✕
+          </button>
+        </div>
+
+        <!-- Note shelves (rendered by JS) -->
+        <div id="crGrid" class="cr-shelves" aria-label="Personal notes"></div>
+
+        <!-- Empty state -->
+        <div id="crEmpty" class="cr-empty" role="status" aria-live="polite">
+          <div class="cr-empty-glyph" aria-hidden="true">⬡</div>
+          <h2 class="cr-empty-title">No notes found</h2>
+          <p class="cr-empty-body">
+            Try different search terms, or clear the filters to browse everything.
+          </p>
+          <button id="crEmptyReset" class="cr-empty-reset-btn">
+            Clear &amp; browse all
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /.cr-page -->
+
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span class="copyright-line">
+        <span class="copyright-mark">©</span>
+        <span>2026 AI Safety Corner</span>
+      </span>
+    </div>
+  </footer>
+
+  <!-- About drawer injected by nav.js -->
+
+  <!-- Scripts -->
+  <script src="../main.js?v=3ce3eb6960"></script>
+  <script src="notes-data-start-here.js?v=bd4b30d800"></script>
+  <script src="notes-data-foundations.js?v=e564b24441"></script>
+  <script src="notes-data-deeper.js?v=bf98408f26"></script>
+  <script src="notes-data.js?v=098b743eb9"></script>
+  <script src="notes-index.js?v=5d97ca8a31"></script>
+</body>
+</html>

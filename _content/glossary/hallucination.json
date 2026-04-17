@@ -1,0 +1,16 @@
+{
+  "slug": "hallucination",
+  "term": "Hallucination",
+  "oneLineDefinition": "When an AI generates confident-sounding but false or entirely fabricated information.",
+  "plainExplanation": "Language models generate text by predicting what comes next, based on patterns learned from training data. Sometimes this produces text that sounds authoritative and specific — but is simply wrong. The model might invent citations, fabricate facts, or describe events that never happened.\n\nThe term borrows from psychology: just as a hallucinating person perceives things that aren't there, a hallucinating model produces outputs that aren't grounded in reality.",
+  "whyItMatters": "As AI systems are used for research assistance, medical information, legal advice, and other high-stakes tasks, hallucinated information can cause real harm. The danger is compounded by the model's confident tone — users may not realize the information is fabricated.",
+  "example": "Ask a language model for a list of papers by a real researcher and receive a convincing-looking list with correct formatting, plausible titles, and fictional DOI numbers. Every detail looks authentic. None of the papers exist.",
+  "analogy": "A confidently wrong friend who makes up answers rather than saying \"I don't know\" — and is so convincing you believe them. Unlike a lying friend, they don't know they're wrong.",
+  "commonConfusions": "Hallucination ≠ lying. Lying requires knowing the truth and deliberately saying something false. A hallucinating model has no such knowledge — it's generating what statistically fits, not reasoning about truth. It's a failure mode, not a behavior.",
+  "tags": ["language-models", "core-concept", "safety"],
+  "topics": ["Language Models", "Core Concepts"],
+  "featured": false,
+  "relatedTerms": ["robustness", "scalable-oversight"],
+  "relatedContent": [],
+  "date": "2026-04-01"
+}

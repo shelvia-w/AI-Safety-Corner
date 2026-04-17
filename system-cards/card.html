@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%232dd4bf'>⌘</text></svg>" />
+  <title>Loading... - System Cards · AI Safety Corner</title>
+  <meta name="description" content="System Cards" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=366f96b8dd" />
+  <link rel="stylesheet" href="cards.css?v=941c5683b0" />
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div id="site-nav"></div>
+  <script src="../nav.js?v=74bfacc0e2"></script>
+
+  <div class="sc-detail-page">
+    <div id="scNotFound" class="sc-not-found" style="display:none;">
+      <div class="sc-not-found-glyph" aria-hidden="true">⌘</div>
+      <h1 class="sc-not-found-title">System card not found</h1>
+      <p class="sc-not-found-body">This system card does not exist yet, or the link may be wrong.</p>
+      <a href="./index.html" class="sc-not-found-link">← Back to all system cards</a>
+    </div>
+
+    <div id="scCardBody">
+      <div class="sc-detail-inner">
+        <a class="sc-back-link" href="./index.html">System Cards</a>
+        <header class="sc-detail-header">
+          <div class="sc-detail-eyebrow">
+            <span class="sc-detail-zone-tag">
+              <span class="sc-detail-zone-glyph" aria-hidden="true">VI</span>
+              System Cards
+            </span>
+            <span id="scAccessBadge" class="sc-badge"></span>
+          </div>
+          <h1 class="sc-detail-title" id="scTitle">-</h1>
+          <div class="sc-meta-row" id="scMetaRow"></div>
+          <div class="sc-detail-reading" id="scReadingTime"></div>
+        </header>
+        <div class="sc-summary">
+          <div class="sc-summary-label">Summary</div>
+          <p class="sc-summary-text" id="scSummary">-</p>
+        </div>
+
+        <section class="sc-section" aria-labelledby="sec-what">
+          <div class="sc-section-heading">
+            <h2 class="sc-section-title" id="sec-what">What It Is</h2>
+          </div>
+          <div class="sc-section-body" id="scWhatItIs"></div>
+        </section>
+
+        <section class="sc-section" aria-labelledby="sec-why">
+          <div class="sc-section-heading">
+            <h2 class="sc-section-title" id="sec-why">Why It Matters</h2>
+          </div>
+          <div class="sc-section-body" id="scWhyItMatters"></div>
+        </section>
+
+        <section class="sc-section" aria-labelledby="sec-capabilities">
+          <div class="sc-section-heading">
+            <h2 class="sc-section-title" id="sec-capabilities">Capabilities</h2>
+          </div>
+          <ul class="sc-capability-list" id="scCapabilities"></ul>
+        </section>
+
+        <section class="sc-section" aria-labelledby="sec-concerns">
+          <div class="sc-section-heading">
+            <h2 class="sc-section-title" id="sec-concerns">Safety Concerns</h2>
+          </div>
+          <ul class="sc-concerns-list" id="scConcerns"></ul>
+        </section>
+
+        <section class="sc-section" aria-labelledby="sec-evaluations">
+          <div class="sc-section-heading">
+            <h2 class="sc-section-title" id="sec-evaluations">Evaluations</h2>
+          </div>
+          <div class="sc-section-body" id="scEvaluations"></div>
+        </section>
+
+        <section class="sc-section" aria-labelledby="sec-incidents">
+          <div class="sc-section-heading">
+            <h2 class="sc-section-title" id="sec-incidents">Known Incidents</h2>
+          </div>
+          <ul class="sc-incidents-list" id="scIncidents"></ul>
+        </section>
+
+        <section class="sc-section" aria-labelledby="sec-unknowns">
+          <div class="sc-section-heading">
+            <h2 class="sc-section-title" id="sec-unknowns">Open Questions</h2>
+          </div>
+          <ul class="sc-unknowns-list" id="scUnknowns"></ul>
+        </section>
+
+        <section class="sc-section" aria-labelledby="sec-transparency">
+          <div class="sc-section-heading">
+            <h2 class="sc-section-title" id="sec-transparency">Transparency Notes</h2>
+          </div>
+          <div class="sc-transparency-block" id="scTransparency"></div>
+        </section>
+
+        <section class="sc-section" id="scDeploySection" aria-labelledby="sec-deploy">
+          <div class="sc-section-heading">
+            <h2 class="sc-section-title" id="sec-deploy">Deployment Context</h2>
+          </div>
+          <p class="sc-deploy-note" id="scDeploy"></p>
+        </section>
+
+        <section class="sc-section" id="scReportsSection" aria-labelledby="sec-reports">
+          <div class="sc-section-heading">
+            <h2 class="sc-section-title" id="sec-reports">Public Reports &amp; Documentation</h2>
+          </div>
+          <ul id="scReports" class="sc-reports-list" aria-label="Public reports"></ul>
+        </section>
+
+        <nav id="scNavCards" class="sc-nav-cards" aria-label="Navigate between system cards"></nav>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span class="copyright-line">
+        <span class="copyright-mark">©</span>
+        <span>2026 AI Safety Corner</span>
+      </span>
+    </div>
+  </footer>
+
+  <script src="../main.js?v=3ce3eb6960"></script>
+  <script src="cards-data.js?v=03c5517218"></script>
+  <script src="cards-detail.js?v=d50708fa4d"></script>
+</body>
+</html>

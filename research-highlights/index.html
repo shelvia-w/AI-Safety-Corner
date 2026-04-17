@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%235b8af5'>◎</text></svg>" />
+  <title>Research Highlights</title>
+  <meta name="description" content="Fresh from the frontier. Recent AI safety research explained, contextualized, and made readable — updated weekly." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=366f96b8dd" />
+  <link rel="stylesheet" href="highlights.css?v=5af2bc4390" />
+</head>
+<body>
+
+  <!-- ============================================================
+       AMBIENT CANVAS
+  ============================================================ -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <!-- ============================================================
+       TOP NAV (injected by nav.js)
+  ============================================================ -->
+  <div id="site-nav"></div>
+  <script src="../nav.js?v=74bfacc0e2"></script>
+
+  <!-- ============================================================
+       RESEARCH HIGHLIGHTS PAGE
+  ============================================================ -->
+  <div class="highlights-page">
+
+    <!-- Hero -->
+    <header class="highlights-hero">
+      <div class="highlights-hero-inner">
+        <div class="highlights-eyebrow">
+          <span class="highlights-eyebrow-glyph">◎</span>
+          <span class="highlights-eyebrow-zone">I</span>
+          <span class="highlights-eyebrow-sep">·</span>
+          <span class="highlights-eyebrow-label">Weekly Picks</span>
+        </div>
+
+        <h1 class="highlights-hero-title">
+          Research <em>Highlights</em>
+        </h1>
+
+        <p class="highlights-hero-subtitle">
+          Discover some of the most interesting recent work in AI safety. Updated weekly.
+        </p>
+
+        <div class="highlights-stats">
+          <span class="highlights-stat">
+            <span class="highlights-stat-dot"></span>
+            <span id="paperCount">0 highlights</span>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Controls: search + difficulty -->
+    <div class="highlights-controls" role="search">
+      <div class="highlights-controls-inner">
+
+        <div class="highlights-search-wrap">
+          <span class="highlights-search-icon" aria-hidden="true">⌕</span>
+          <input
+            type="search"
+            id="highlightsSearch"
+            class="highlights-search"
+            placeholder="Search papers, authors, topics…"
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Search research highlights"
+          />
+        </div>
+
+        <div class="highlights-filter-group" role="group" aria-label="Filter by difficulty">
+          <button class="filter-pill filter-pill--beginner" data-difficulty="beginner" aria-pressed="false">Beginner</button>
+          <button class="filter-pill filter-pill--intermediate" data-difficulty="intermediate" aria-pressed="false">Intermediate</button>
+          <button class="filter-pill filter-pill--advanced" data-difficulty="advanced" aria-pressed="false">Advanced</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Topic filters -->
+    <div class="highlights-topics">
+      <div class="highlights-topics-inner">
+        <span class="highlights-topics-label">Topics</span>
+        <div id="topicFilters" role="group" aria-label="Filter by topic"></div>
+      </div>
+    </div>
+
+    <!-- Results area -->
+    <div class="highlights-body">
+      <div class="highlights-body-inner">
+
+        <div class="highlights-results-line">
+          <span id="resultsCount" class="highlights-results-count" aria-live="polite" aria-atomic="true"></span>
+          <button id="highlightsClearBtn" class="highlights-clear-btn" aria-label="Clear all filters">
+            Clear filters ✕
+          </button>
+        </div>
+
+        <!-- Featured card (shown only when no filters active) -->
+        <div id="featuredWrap"></div>
+
+        <!-- Paper grid (rendered by JS) -->
+        <div id="highlightsGrid" class="ph-grid" role="list" aria-label="Research highlights"></div>
+
+        <!-- Empty state -->
+        <div id="highlightsEmpty" class="highlights-empty" role="status" aria-live="polite">
+          <div class="highlights-empty-glyph" aria-hidden="true">◎</div>
+          <h2 class="highlights-empty-title">No papers found</h2>
+          <p class="highlights-empty-body">
+            Try a different search term, or clear the filters to browse everything.
+          </p>
+          <button id="emptyResetBtn" class="highlights-empty-reset">
+            Clear &amp; browse all
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /.highlights-page -->
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span class="copyright-line">
+        <span class="copyright-mark">©</span>
+        <span>2026 AI Safety Corner</span>
+      </span>
+    </div>
+  </footer>
+
+  <!-- About drawer injected by nav.js -->
+
+  <!-- ============================================================
+       SCRIPTS
+  ============================================================ -->
+  <script src="../main.js?v=3ce3eb6960"></script>
+  <script src="highlights-data-2026.js?v=18e66711d2"></script>
+  <script src="highlights-data.js?v=0d3d561079"></script>
+  <script src="highlights-index.js?v=e50498d853"></script>
+</body>
+</html>

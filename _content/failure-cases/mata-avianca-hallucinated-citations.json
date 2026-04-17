@@ -1,0 +1,43 @@
+{
+  "slug": "mata-avianca-hallucinated-citations",
+  "title": "Hallucinated Legal Citations Filed in Federal Court",
+  "contentType": "failure-case",
+  "systemName": "ChatGPT (GPT-3.5 / GPT-4)",
+  "organization": "OpenAI",
+  "date": "2023-05-25",
+  "statusOfCase": "resolved",
+  "summary": "In the Mata v. Avianca personal injury case, a New York attorney used ChatGPT to assist with legal research. The model confidently produced citations to several court cases that did not exist — fabricated case names, judges, dates, and quotations that appeared entirely plausible. The attorney filed the brief without independently verifying the citations. When the citations were challenged, the error was discovered. The lawyer and the law firm were sanctioned by the court, and the incident became one of the most prominent real-world examples of AI hallucination causing direct legal harm.",
+  "shortDescription": "A lawyer used ChatGPT to research case law and filed a federal court brief citing six cases that did not exist — fabricated by the model with realistic-sounding details.",
+  "whatHappened": "Roberto Mata sued the airline Avianca in a personal injury case in New York federal court. His attorney, Steven Schwartz, used ChatGPT to assist with legal research and submitted a court filing citing approximately six cases as precedents.\n\nWhen opposing counsel attempted to locate the cited cases, they could not be found in any legal database. The cases, while plausible-sounding, were entirely fabricated: case names, docket numbers, judges, dates, and quoted language were all hallucinated by the model.\n\nCritically, when Schwartz asked ChatGPT directly whether the cases were real, the model responded that they were. This is a key characteristic of hallucination: the model does not signal uncertainty — it presents invented information with the same confidence as factual information.\n\nJudge P. Kevin Castel sanctioned both Schwartz and the firm for filing the false citations without verification, calling it \"an act of conscious avoidance.\" The incident attracted widespread media coverage and prompted urgent discussion about the use of AI in legal practice.",
+  "whyItMatters": "The Mata v. Avianca case illustrated several important failure patterns at once.\n\nFirst, it demonstrated that hallucination is not just an occasional inconvenience — it is a systematic risk in any domain where citation, accuracy, and verifiability matter. Legal research is especially high-stakes because false citations are discoverable, formally challenged, and carry legal consequences.\n\nSecond, it showed that models can hallucinate with full confidence. ChatGPT did not express uncertainty when producing the false citations, and it affirmed their reality when asked. Users who aren't already aware of this failure mode have no reliable signal from the model itself.\n\nThird, it highlighted the danger of using AI as a trusted research partner without verification. The attorney treated the model's output as ground truth rather than as a starting point requiring independent confirmation.",
+  "riskLevel": "high",
+  "deploymentContext": "Legal research, professional use case",
+  "affectedUsers": "Parties to litigation, the legal system",
+  "likelyCauses": [
+    "Language models produce plausible-sounding text even when they lack grounded knowledge of specific facts",
+    "Legal citations have a predictable format that models can reproduce convincingly without having seen the actual cases",
+    "Models do not have a reliable mechanism to distinguish between things they know and things they are confabulating",
+    "The model was asked to affirm the truth of its own output — a task it cannot reliably perform",
+    "No verification step was applied by the user before filing"
+  ],
+  "lessons": [
+    "AI-generated citations, statistics, quotes, and factual claims must be independently verified before use in any formal or high-stakes context",
+    "Asking the model whether its outputs are correct is not a reliable verification strategy — models cannot reliably self-audit",
+    "Hallucination is a structural property of current language models, not a bug that affects only rare or edge-case prompts",
+    "Workflows that incorporate AI tools need explicit verification steps — responsibility does not transfer to the model"
+  ],
+  "mitigations": [
+    "OpenAI added more explicit caveats about factual reliability in ChatGPT's responses",
+    "Legal professional organizations issued guidance requiring independent verification of AI-generated research",
+    "Several legal research tools began flagging AI-generated content and linking to verified source databases",
+    "Courts in multiple jurisdictions introduced requirements to disclose AI use in filings"
+  ],
+  "tags": ["hallucination", "legal", "citation", "professional-use", "chatgpt", "openai"],
+  "featured": true,
+  "status": "published",
+  "updated": "2026-01-01",
+  "sourceLinks": [
+    { "title": "Lawyers Sanctioned for Submitting Fake ChatGPT Citations (NY Times)", "url": "https://www.nytimes.com/2023/06/22/nyregion/lawyers-fined-chatgpt-fake-cases.html", "type": "article" },
+    { "title": "Order Sanctioning Attorneys (Southern District of New York)", "url": "https://storage.courtlistener.com/recap/gov.uscourts.nysd.575368/gov.uscourts.nysd.575368.54.0.pdf", "type": "court-document" }
+  ]
+}

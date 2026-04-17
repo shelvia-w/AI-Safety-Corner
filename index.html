@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23c5b8f5'>✤</text></svg>" />
+  <title>AI Safety Corner</title>
+  <meta name="description" content="A beginner-friendly guide to AI safety, covering core readings, research highlights, failure cases, evaluations, glossary terms, and system cards." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=366f96b8dd" />
+</head>
+<body>
+
+  <!-- ============================================================
+       AMBIENT CANVAS (particles / star field)
+  ============================================================ -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <!-- ============================================================
+       TOP NAV (injected by nav.js)
+  ============================================================ -->
+  <div id="site-nav"></div>
+  <script src="nav.js?v=74bfacc0e2"></script>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <header class="hero" id="hero">
+    <div class="hero-backdrop" aria-hidden="true">
+      <div class="backdrop-glow glow-1"></div>
+      <div class="backdrop-glow glow-2"></div>
+      <div class="backdrop-glow glow-3"></div>
+      <div class="grid-lines"></div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-badge">Shelvia Wongso</span>
+        <span class="eyebrow-divider">·</span>
+        <span class="eyebrow-label">Personal Guide</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="title-line-1">The Pursuit</span>
+        <span class="title-line-2 title-italic">of Safe</span>
+        <span class="title-line-3">Intelligence</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        A welcoming corner for exploring AI safety with curiosity, care, and clarity — beginner-friendly and carefully curated.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#zones" class="cta-primary">
+          <span>Explore the Guide</span>
+          <span class="cta-icon">◆</span>
+        </a>
+        <a href="research-highlights/index.html" id="hero-highlight-link" class="cta-secondary">Read This Week's Highlight →</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-label="Scroll to explore">
+      <span class="scroll-line"></span>
+      <span class="scroll-text">scroll</span>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       FEATURED RESEARCH HIGHLIGHT
+  ============================================================ -->
+  <section class="featured" id="featured">
+    <div class="featured-inner">
+      <div class="section-header">
+        <span class="section-num">— 01</span>
+        <span class="section-label">Research Highlights</span>
+        <span class="section-sublabel">Updated Weekly</span>
+      </div>
+
+      <div class="featured-card">
+        <div class="featured-card-left">
+          <p class="featured-kicker">This week</p>
+          <h2 class="featured-title" id="featured-title">A First Look at Claude Mythos</h2>
+          <div class="featured-divider"></div>
+          <p class="featured-meta" id="featured-meta">
+            <span>Alignment</span>
+            <span class="dot">·</span>
+            <span>Evaluation</span>
+          </p>
+        </div>
+
+        <div class="featured-card-right">
+          <p class="featured-lead" id="featured-lead">
+            Anthropic argues that Claude Mythos Preview is still low-risk overall, but agentic capability is rising fast enough that monitoring and mitigation need to improve quickly.
+          </p>
+          <a href="research-highlights/research.html?slug=alignment-risk-update-claude-mythos-preview" id="featured-link" class="featured-read-link">
+            <span>Read full breakdown</span>
+            <span class="link-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION NAVIGATION GRID
+  ============================================================ -->
+  <section class="zones" id="zones">
+    <div class="zones-inner">
+      <div class="section-header">
+        <span class="section-num">— 02</span>
+        <span class="section-label">Navigate the Guide</span>
+        <span class="section-sublabel">Six Sections</span>
+      </div>
+
+      <div class="zones-grid">
+
+        <!-- Zone 1: Research Highlights  -->
+        <a href="research-highlights/index.html" class="zone zone--highlights" data-zone="highlights">
+          <div class="zone-bg" aria-hidden="true"></div>
+          <div class="zone-inner">
+            <div class="zone-header">
+              <span class="zone-num">I</span>
+              <span class="zone-tag">Weekly Picks</span>
+            </div>
+            <div class="zone-glyph" aria-hidden="true">◎</div>
+            <h3 class="zone-title">Research Highlights</h3>
+            <p class="zone-desc">What’s new in the AI safety field? Explore the latest research and ideas.</p>
+            <div class="zone-footer">
+              <span class="zone-count" id="researchHighlightsHomeCount">0 highlights</span>
+              <span class="zone-enter">Enter →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Zone 2: Personal Notes -->
+        <a href="personal-notes/index.html" class="zone zone--foundations" data-zone="foundations">
+          <div class="zone-bg" aria-hidden="true"></div>
+          <div class="zone-inner">
+            <div class="zone-header">
+              <span class="zone-num">II</span>
+              <span class="zone-tag">Foundations</span>
+            </div>
+            <div class="zone-glyph" aria-hidden="true">⬡</div>
+            <h3 class="zone-title">Personal Notes</h3>
+            <p class="zone-desc">New to AI safety? Start here with a collection of notes from my learning journey.</p>
+            <div class="zone-footer">
+              <span class="zone-count" id="coreReadingsHomeCount">0 notes</span>
+              <span class="zone-enter">Enter →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Zone 3: Failure Cases -->
+        <a href="failure-cases/index.html" class="zone zone--failures" data-zone="failures">
+          <div class="zone-bg" aria-hidden="true"></div>
+          <div class="zone-inner">
+            <div class="zone-header">
+              <span class="zone-num">III</span>
+              <span class="zone-tag">Case Files</span>
+            </div>
+            <div class="zone-glyph" aria-hidden="true">⚠</div>
+            <h3 class="zone-title">Failure Cases</h3>
+            <p class="zone-desc">When do AI systems fail? The warning signs we shouldn't ignore when building safe AI.</p>
+            <div class="zone-footer">
+              <span class="zone-count" id="failureCasesHomeCount">0 cases</span>
+              <span class="zone-enter">Enter →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Zone 4: Evaluation -->
+        <a href="evaluation/index.html" class="zone zone--eval" data-zone="eval">
+          <div class="zone-bg" aria-hidden="true"></div>
+          <div class="zone-inner">
+            <div class="zone-header">
+              <span class="zone-num">IV</span>
+              <span class="zone-tag">Testing Ground</span>
+            </div>
+            <div class="zone-glyph" aria-hidden="true">◈</div>
+            <h3 class="zone-title">Evaluation</h3>
+            <p class="zone-desc">How do we evaluate the safety of AI systems? Explore common evals and benchmarks here.</p>
+            <div class="zone-footer">
+              <span class="zone-count" id="evaluationHomeCount">0 entries</span>
+              <span class="zone-enter">Enter →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Zone 5: Glossary -->
+        <a href="glossary/index.html" class="zone zone--glossary" data-zone="glossary">
+          <div class="zone-bg" aria-hidden="true"></div>
+          <div class="zone-inner">
+            <div class="zone-header">
+              <span class="zone-num">V</span>
+              <span class="zone-tag">Key Terms</span>
+            </div>
+            <div class="zone-glyph" aria-hidden="true">❋</div>
+            <h3 class="zone-title">Glossary</h3>
+            <p class="zone-desc">Encountered an unfamiliar AI safety term? Find the definition here.</p>
+            <div class="zone-footer">
+              <span class="zone-count" id="glossaryHomeCount">0 terms</span>
+              <span class="zone-enter">Enter →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Zone 6: System Cards -->
+        <a href="system-cards/index.html" class="zone zone--systemcards" data-zone="systemcards">
+          <div class="zone-bg" aria-hidden="true"></div>
+          <div class="zone-inner">
+            <div class="zone-header">
+              <span class="zone-num">VI</span>
+              <span class="zone-tag">Model Library</span>
+            </div>
+            <div class="zone-glyph" aria-hidden="true">⌘</div>
+            <h3 class="zone-title">System Cards</h3>
+            <p class="zone-desc">New AI model just dropped? See what safety evaluations it went through.</p>
+            <div class="zone-footer">
+              <span class="zone-count" id="systemCardsHomeCount">0 models</span>
+              <span class="zone-enter">Enter →</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FROM THE GUIDE (2 secondary notes)
+  ============================================================ -->
+  <section class="signals" id="signals">
+    <div class="signals-inner">
+      <div class="section-header">
+        <span class="section-num">— 03</span>
+        <span class="section-label">From the Archive</span>
+        <span class="section-sublabel">Little Discoveries</span>
+      </div>
+
+      <div class="signals-grid" id="signals-grid">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SITE FOOTER
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span class="copyright-line">
+        <span class="copyright-mark">©</span>
+        <span>2026 AI Safety Corner</span>
+      </span>
+    </div>
+  </footer>
+
+  <script src="personal-notes/notes-data-start-here.js?v=bd4b30d800"></script>
+  <script src="personal-notes/notes-data-foundations.js?v=e564b24441"></script>
+  <script src="personal-notes/notes-data-deeper.js?v=bf98408f26"></script>
+  <script src="personal-notes/notes-data.js?v=098b743eb9"></script>
+  <script src="failure-cases/failures-data.js?v=00daa8b62b"></script>
+  <script src="evaluation/eval-data.js?v=7b9455c400"></script>
+  <script src="glossary/glossary-data.js?v=4899776988"></script>
+  <script src="system-cards/cards-data.js?v=03c5517218"></script>
+  <script src="research-highlights/highlights-data-2026.js?v=18e66711d2"></script>
+  <script src="research-highlights/highlights-data.js?v=0d3d561079"></script>
+
+  <script src="featured.js?v=5ae9a95fa1"></script>
+  <script src="main.js?v=3ce3eb6960"></script>
+</body>
+</html>

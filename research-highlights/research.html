@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%235b8af5'>◎</text></svg>" />
+  <title>Loading... - Research Highlights - AI Safety Corner</title>
+  <meta name="description" content="Research Highlights" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=366f96b8dd" />
+  <link rel="stylesheet" href="highlights.css?v=5af2bc4390" />
+</head>
+<body>
+  <!-- ============================================================
+       AMBIENT CANVAS
+  ============================================================ -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <!-- ============================================================
+       TOP NAV (injected by nav.js)
+  ============================================================ -->
+  <div id="site-nav"></div>
+  <script src="../nav.js?v=74bfacc0e2"></script>
+
+  <!-- ============================================================
+       RESEARCH HIGHLIGHT DETAIL
+  ============================================================ -->
+  <div class="paper-page">
+    <div class="paper-page-inner">
+
+      <!-- Not found state -->
+      <div id="paperNotFound" class="paper-not-found" style="display:none;">
+        <div class="paper-not-found-glyph" aria-hidden="true">?</div>
+        <h1 class="paper-not-found-title">Paper not found</h1>
+        <p class="paper-not-found-body">
+          This paper does not exist yet, or the link may be wrong.
+        </p>
+        <a href="./index.html" class="paper-not-found-link">← Back to Research Highlights</a>
+      </div>
+
+      <!-- Paper content rendered by JS -->
+      <div id="paperBody">
+        <a class="paper-back-link" href="./index.html">Research Highlights</a>
+
+        <header class="paper-header">
+          <div class="paper-header-eyebrow">
+            <span class="paper-header-zone">
+              <span class="zone-glyph-inline" aria-hidden="true">I</span>
+              Research Highlight
+            </span>
+            <span id="paperDifficulty" class="difficulty-badge"></span>
+          </div>
+
+          <h1 class="paper-title" id="paperTitle">-</h1>
+          <div class="paper-meta-row" id="paperMetaRow"></div>
+          <div class="paper-topics-row" id="paperTopics"></div>
+        </header>
+
+        <div class="paper-takeaway">
+          <div class="paper-takeaway-label">Takeaway</div>
+          <p class="paper-takeaway-text" id="paperTakeaway"></p>
+        </div>
+
+        <div class="paper-body">
+          <section class="paper-section-block paper-section-block--matters">
+            <h2 class="paper-section-label">Why It Matters</h2>
+            <div class="paper-prose" id="paperWhyItMatters"></div>
+          </section>
+
+          <section class="paper-section-block paper-section-block--core">
+            <h2 class="paper-section-label">Core Idea</h2>
+            <div class="paper-prose" id="paperCoreIdea"></div>
+          </section>
+
+          <section class="paper-section-block">
+            <h2 class="paper-section-label">Key Findings</h2>
+            <ul class="paper-findings-list" id="paperKeyFindings"></ul>
+          </section>
+
+          <section class="paper-section-block">
+            <h2 class="paper-section-label">Strengths</h2>
+            <ul class="paper-checklist" id="paperStrengths"></ul>
+          </section>
+
+          <section class="paper-section-block" id="paperLimitationsBlock">
+            <h2 class="paper-section-label">Limitations</h2>
+            <ul class="paper-checklist" id="paperLimitations"></ul>
+          </section>
+
+          <section class="paper-section-block" id="paperQuestionsBlock">
+            <h2 class="paper-section-label">Open Questions</h2>
+            <ul class="paper-checklist" id="paperOpenQuestions"></ul>
+          </section>
+
+          <section class="paper-section-block">
+            <h2 class="paper-section-label">Who This Is For</h2>
+            <div class="paper-recommended-list" id="paperRecommendedFor"></div>
+          </section>
+        </div>
+
+        <div class="paper-source-links" id="paperSourceLinks">
+          <h2 class="paper-section-label">Source</h2>
+          <div class="paper-source-buttons" id="paperSourceButtons"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span class="copyright-line">
+        <span class="copyright-mark">©</span>
+        <span>2026 AI Safety Corner</span>
+      </span>
+    </div>
+  </footer>
+
+  <!-- About drawer injected by nav.js -->
+
+  <!-- ============================================================
+       SCRIPTS
+  ============================================================ -->
+  <script src="../main.js?v=3ce3eb6960"></script>
+  <script src="highlights-data-2026.js?v=18e66711d2"></script>
+  <script src="highlights-data.js?v=0d3d561079"></script>
+  <script src="highlights-research.js?v=7ccfeb438b"></script>
+</body>
+</html>

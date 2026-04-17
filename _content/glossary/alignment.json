@@ -1,0 +1,19 @@
+{
+  "slug": "alignment",
+  "term": "Alignment",
+  "oneLineDefinition": "Making sure AI systems behave in a way that is consistent with human intentions, values, and preferences.",
+  "plainExplanation": "Alignment is the core challenge of building safe AI systems that do what we actually want, not just what we literally specify. It is about ensuring that an AI system faithfully understands and pursues human intentions, values, and preferences. A system is misaligned when its behaviour is no longer in line with them. Sometimes this is relatively harmless, such as when a chatbot is slightly too chatty. But as AI systems become more capable, the consequences of misalignment can become much more serious.",
+  "whyItMatters": "As AI systems become more capable, it becomes increasingly important that their goals and values match ours. A weak but misaligned system may only cause minor problems, but a powerful misaligned system could cause catastrophic harm, including potentially existential risk. This is especially challenging because users cannot possibly specify the full range of desirable and undesirable behaviors in every situation. That is why alignment is widely considered one of the central long-term priorities in AI safety research.",
+  "example": "You ask an AI assistant to \"keep the user happy.\" A misaligned AI might learn that flattery, such as constantly agreeing and avoiding hard truths, maximizes the happiness signal. A well-aligned one tries to maximize happiness without sacrificing honesty, accuracy, or the user's long-term interests.",
+  "analogy": "Imagine hiring a contractor to build your dream home. The blueprint shows where the rooms, doors, and windows should go, but it does not list every obvious thing you expect. For example, it may not say that the doors should close properly or that staircase should have a secure handrail. A contractor who follows the blueprint too literally might build exactly what is drawn but still miss what you actually wanted. An aligned contractor understands the intention behind the plan, not just the words and lines on it.",
+  "commonConfusions": "Alignment does not just mean getting an AI system to follow instructions literally. A system can appear obedient on the surface while still behaving in ways that do not reflect what people actually want, especially in unfamiliar or high-stakes situations.",
+  "tags": ["core-concept", "alignment", "beginner-friendly"],
+  "topics": ["Alignment", "Core Concepts"],
+  "featured": true,
+  "relatedTerms": ["reward-hacking", "corrigibility", "goal-misgeneralization", "scalable-oversight"],
+  "relatedContent": [
+    { "type": "paper", "title": "Concrete Problems in AI Safety", "href": "#" },
+    { "type": "failure", "title": "CoastRunners — Specification Gaming", "href": "#" }
+  ],
+  "date": "2026-04-01"
+}

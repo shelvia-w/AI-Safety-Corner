@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23f5c842'>◈</text></svg>" />
+  <title>Loading... - Evaluation · AI Safety Corner</title>
+  <meta name="description" content="Evaluation" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../styles.css?v=366f96b8dd" />
+  <link rel="stylesheet" href="evaluation.css?v=ba7aa90c05" />
+</head>
+
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <div id="site-nav"></div>
+  <script src="../nav.js?v=74bfacc0e2"></script>
+
+  <div class="ev-detail-page">
+    <div id="evNotFound" class="ev-not-found" style="display: none;">
+      <div class="ev-not-found-glyph" aria-hidden="true">?</div>
+      <h1 class="ev-not-found-title">Evaluation not found</h1>
+      <p class="ev-not-found-body">
+        This evaluation entry does not exist yet, or the link may be wrong.
+      </p>
+      <a href="./index.html" class="ev-not-found-link">&larr; Back to all evaluations</a>
+    </div>
+
+    <div id="evEntryBody">
+      <div class="ev-detail-inner">
+        <a class="ev-back-link" href="./index.html">Evaluation</a>
+
+        <header class="ev-detail-header">
+          <div class="ev-detail-eyebrow">
+            <span class="ev-detail-zone-tag">
+              <span class="ev-detail-zone-glyph" aria-hidden="true">IV</span>
+              Evaluation
+            </span>
+            <span id="evTypeBadge" class="ev-badge"></span>
+          </div>
+
+          <h1 class="ev-detail-title" id="evTitle">-</h1>
+          <div class="ev-meta-row" id="evMetaRow"></div>
+          <div class="ev-detail-reading" id="evReadingTime"></div>
+        </header>
+
+        <p class="ev-detail-summary" id="evSummary"></p>
+
+        <section class="ev-section">
+          <div class="ev-section-heading">
+            <h2 class="ev-section-title">What It Measures</h2>
+          </div>
+          <div class="ev-section-body" id="evWhatItMeasures"></div>
+        </section>
+
+        <section class="ev-section">
+          <div class="ev-section-heading">
+            <h2 class="ev-section-title">Why It Matters</h2>
+          </div>
+          <div class="ev-section-body" id="evWhyItMatters"></div>
+        </section>
+
+        <section class="ev-section">
+          <div class="ev-section-heading">
+            <h2 class="ev-section-title">How It Works</h2>
+          </div>
+          <div class="ev-section-body" id="evHowItWorks"></div>
+        </section>
+
+        <section class="ev-section">
+          <div class="ev-section-heading">
+            <h2 class="ev-section-title">Scoring Method</h2>
+          </div>
+          <div class="ev-section-body" id="evScoringMethod"></div>
+        </section>
+
+        <section class="ev-section">
+          <div class="ev-section-heading">
+            <h2 class="ev-section-title">Example Task</h2>
+          </div>
+          <div class="ev-section-body" id="evExampleTask"></div>
+        </section>
+
+        <section class="ev-section">
+          <div class="ev-section-heading">
+            <h2 class="ev-section-title">Strengths</h2>
+          </div>
+          <ul id="evStrengths" class="ev-strengths-list"></ul>
+        </section>
+
+        <section class="ev-section">
+          <div class="ev-section-heading">
+            <h2 class="ev-section-title">Limitations</h2>
+          </div>
+          <ul id="evLimitations" class="ev-limitations-list"></ul>
+        </section>
+
+        <section class="ev-section">
+          <div class="ev-section-heading">
+            <h2 class="ev-section-title">Common Misreadings</h2>
+          </div>
+          <ul
+            id="evMisreadings"
+            class="ev-misreadings-list"
+            aria-label="Common misreadings"
+          ></ul>
+        </section>
+
+        <section class="ev-section" id="evUsageSection">
+          <div class="ev-section-heading">
+            <h2 class="ev-section-title">Usage Examples</h2>
+          </div>
+          <ul id="evUsage" class="ev-usage-list"></ul>
+        </section>
+
+        <section class="ev-section" id="evSourcesSection">
+          <div class="ev-section-heading">
+            <h2 class="ev-section-title">Sources</h2>
+          </div>
+          <div class="ev-sources" id="evSources"></div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span class="copyright-line">
+        <span class="copyright-mark">©</span>
+        <span>2026 AI Safety Corner</span>
+      </span>
+    </div>
+  </footer>
+
+  <!-- About drawer injected by nav.js -->
+
+  <script src="../main.js?v=3ce3eb6960"></script>
+  <script src="eval-data.js?v=7b9455c400"></script>
+  <script src="eval-detail.js?v=94f9cc4c91"></script>
+</body>
+</html>

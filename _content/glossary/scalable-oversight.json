@@ -1,0 +1,18 @@
+{
+  "slug": "scalable-oversight",
+  "term": "Scalable Oversight",
+  "oneLineDefinition": "Techniques for maintaining meaningful human supervision of AI systems that may become too capable to directly evaluate.",
+  "plainExplanation": "As AI systems become more capable, they may produce work that's difficult or impossible for humans to fully evaluate. Scalable oversight is a family of research approaches designed to solve this — ways to keep humans meaningfully in the loop even when the AI exceeds human capabilities in specific domains.\n\nKey approaches include debate (AI systems argue positions for a human judge), amplification (using AI assistance to help humans evaluate AI work), and recursive reward modeling.",
+  "whyItMatters": "If we lose the ability to verify AI behavior, we lose the ability to ensure AI safety. Scalable oversight tries to extend human oversight into domains where direct evaluation breaks down — a critical challenge as AI continues to advance.",
+  "example": "AI Debate: two AI systems argue opposite sides of a complex question. A human judge evaluates the quality of arguments, not the raw answer. If one AI makes a false claim, the other can expose it — making the human's job feasible even if they couldn't evaluate the original question directly.",
+  "analogy": "A company auditor who can't personally do every employee's specialized job, but can verify quality through sampling, process review, cross-checking, and probing questions — maintaining accountability without replicating every task.",
+  "commonConfusions": "Scalable oversight ≠ removing humans from oversight. The goal is to keep humans meaningfully involved, even as AI capabilities grow. It's about designing oversight methods that remain effective at higher capability levels — not automating oversight away.",
+  "tags": ["alignment", "oversight", "advanced"],
+  "topics": ["Alignment", "Safety Techniques"],
+  "featured": false,
+  "relatedTerms": ["alignment", "interpretability", "corrigibility"],
+  "relatedContent": [
+    { "type": "paper", "title": "Scalable agent alignment via reward modeling", "href": "#" }
+  ],
+  "date": "2026-04-01"
+}

@@ -1,0 +1,49 @@
+{
+  "slug": "red-teaming",
+  "title": "Red Teaming",
+  "contentType": "evaluation",
+  "evaluationType": "Method",
+  "safetyArea": "Adversarial Robustness",
+  "summary": "Structured adversarial testing by human experts who attempt to discover failure modes, safety gaps, and unexpected behaviors that automated testing cannot anticipate.",
+  "quickDefinition": "Red teaming is a structured practice where a group of human evaluators deliberately try to break an AI system — finding harmful behaviors, policy violations, and unexpected failure modes — before the system is deployed to users.",
+  "whatItMeasures": "Red teaming doesn't produce a single metric. It is a discovery method. The output is a catalog of failure modes: specific prompts and conditions that reliably trigger harmful or unexpected behavior, along with assessments of severity and reproducibility.\n\nUnlike benchmark testing, red teaming produces qualitative findings. The most valuable results are the ones nobody expected — the failure modes that no automated test would have checked for, found through human creativity, adversarial thinking, and domain expertise.",
+  "whyItMatters": "Automated testing can only check what evaluators thought to check. Red teaming brings human ingenuity to find what wasn't anticipated. Major labs consistently report that their most significant safety discoveries came from red teamers, not automated sweeps.\n\nRed teaming is also the primary way to evaluate multi-turn, contextual, and social engineering vulnerabilities — failure modes that can only be discovered through back-and-forth conversation, not single-prompt testing.",
+  "howItWorks": "Red team exercises are typically scoped to specific risk domains (e.g., \"find ways to get CBRN uplift\" or \"discover how the model can be used to manipulate users emotionally\") and time-bounded. Teams may include internal safety researchers, external contractors, or domain-specific experts — biosecurity researchers for bio risk, security researchers for cyberoffense.\n\nModern AI red teaming increasingly uses AI assistance: one model helps generate attack prompts against another (\"LLM-assisted red teaming\"). This scales creativity but may miss attacks that both models share as blind spots.\n\nFindings are documented qualitatively with specific reproducible examples, severity ratings, and recommended mitigations.",
+  "difficulty": "intermediate",
+  "featured": true,
+  "status": "active",
+  "date": "2026-04-01",
+  "updated": "2026-04-01",
+  "scoringMethod": "No standard quantitative metric. Outputs are qualitative: a vulnerability catalog with specific examples, severity ratings (low / medium / high / critical), and reproducibility notes. Some organizations publish summary statistics (\"X% of assigned red team tasks succeeded\") but the primary artifact is the detailed report.",
+  "exampleTask": "A red teamer with biosecurity expertise crafts a sequence of seemingly innocent chemistry questions, each building on the previous answer, steering the model toward synthesis details for a dangerous pathogen. The goal is to discover whether the model's safety response degrades across a multi-turn conversation in a way that no single-turn test would catch.",
+  "strengths": [
+    "Finds novel failure modes that are genuinely beyond what automated testing can anticipate",
+    "Domain experts can probe high-risk areas with the depth those areas require",
+    "Multi-turn, contextual, and social-engineering vulnerabilities are naturally discovered",
+    "Generates concrete artifacts — specific prompts, conversation logs — that directly inform mitigations"
+  ],
+  "limitations": [
+    "Results depend heavily on team skill, creativity, domain expertise, and available time",
+    "Absence of findings does not mean absence of problems — it may mean the team ran out of time or ideas",
+    "Hard to standardize or compare across organizations and model versions",
+    "Resource-intensive: good red teaming requires expert people and significant investment"
+  ],
+  "commonMisreadings": [
+    "\"No critical issues found\" is weak evidence of safety — it may reflect limits of the team, not the model's actual robustness.",
+    "Red teaming is not a safety certification. It is one signal in a broader safety evaluation portfolio.",
+    "LLM-assisted red teaming scales output but may create a blind spot: both models may share failure modes that neither will explore against the other."
+  ],
+  "alternatives": [
+    { "name": "Jailbreak Evaluation", "href": "eval.html?slug=jailbreak-evaluation" },
+    { "name": "Dangerous Capability Evaluation", "href": "eval.html?slug=dangerous-capability-evaluation" }
+  ],
+  "usageExamples": [
+    { "org": "Anthropic", "description": "Engages third-party red teams — including METR and Apollo Research — to evaluate Claude models for dangerous capabilities before release. Named red team contributors appear in published system cards." },
+    { "org": "OpenAI", "description": "Maintains an internal red team and supplements with external experts for specialized domains. Findings are summarized in GPT-4 and GPT-4o system cards." },
+    { "org": "US AI Safety Institute (AISI)", "description": "Conducts pre-deployment evaluations of frontier models from multiple labs, including adversarial red teaming, as part of national AI safety assessment programs." }
+  ],
+  "sourceLinks": [
+    { "title": "Red Teaming Language Models to Reduce Harms (Ganguli et al.)", "url": "https://arxiv.org/abs/2209.07858", "type": "paper" },
+    { "title": "OpenAI Red Teaming Network", "url": "https://openai.com/index/red-teaming-network/", "type": "reference" }
+  ]
+}

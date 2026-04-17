@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23f03e8a'>⚠</text></svg>" />
+  <title>Failure Cases</title>
+  <meta
+    name="description"
+    content="A curated casebook of AI failure examples - what happened, why it matters, and what we can learn. Real incidents, documented clearly."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../styles.css?v=366f96b8dd" />
+  <link rel="stylesheet" href="failures.css?v=f8fa4c6578" />
+</head>
+
+<body>
+  <!-- Ambient canvas -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <!-- Top nav injected by nav.js -->
+  <div id="site-nav"></div>
+  <script src="../nav.js?v=74bfacc0e2"></script>
+
+  <main class="fc-page">
+    <!-- Hero -->
+    <header class="fc-hero">
+      <div class="fc-hero-inner">
+        <div class="fc-eyebrow">
+          <span class="fc-eyebrow-glyph" aria-hidden="true">&#9888;</span>
+          <span class="fc-eyebrow-zone">III</span>
+          <span class="fc-eyebrow-sep">&middot;</span>
+          <span class="fc-eyebrow-label">Case Files</span>
+        </div>
+
+        <h1 class="fc-hero-title">Failure <em>Cases</em></h1>
+
+        <p class="fc-hero-subtitle">
+          Learn from real AI failures that highlight why safety research matters.<br />
+          A collection of incidents, risks, and warning signs.
+        </p>
+
+        <div class="fc-stats">
+          <span class="fc-stat">
+            <span class="fc-stat-dot" aria-hidden="true"></span>
+            <span id="totalCount">0 cases</span>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sticky controls -->
+    <section class="fc-controls" role="search" aria-label="Filter failure cases">
+      <div class="fc-controls-inner">
+        <div class="fc-search-wrap">
+          <span class="fc-search-icon" aria-hidden="true">&#8981;</span>
+          <input
+            type="search"
+            id="fcSearch"
+            class="fc-search"
+            placeholder="Search cases..."
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Search failure cases"
+          />
+        </div>
+
+        <div class="fc-risk-group" role="group" aria-label="Filter by risk level">
+          <button class="risk-pill risk-pill--low" data-risk="low" aria-pressed="false">Low Risk</button>
+          <button class="risk-pill risk-pill--medium" data-risk="medium" aria-pressed="false">Medium Risk</button>
+          <button class="risk-pill risk-pill--high" data-risk="high" aria-pressed="false">High Risk</button>
+          <button class="risk-pill risk-pill--critical" data-risk="critical" aria-pressed="false">Critical</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="fc-body" aria-label="Failure case results">
+      <div class="fc-body-inner">
+        <div class="fc-results-line">
+          <span
+            id="resultsCount"
+            class="fc-results-count"
+            aria-live="polite"
+            aria-atomic="true"
+          ></span>
+          <button id="fcClearBtn" class="fc-clear-btn" aria-label="Clear all filters">
+            Clear filters &times;
+          </button>
+        </div>
+
+        <div id="fcGrid" role="list" aria-label="Failure cases"></div>
+
+        <div id="fcEmpty" class="fc-empty" role="status" aria-live="polite">
+          <div class="fc-empty-glyph" aria-hidden="true">&#9888;</div>
+          <h2 class="fc-empty-title">No cases found</h2>
+          <p class="fc-empty-body">
+            Try a different search term, or clear the filters to browse all entries.
+          </p>
+          <button id="emptyResetBtn" class="fc-empty-reset">
+            Clear &amp; browse all
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span class="copyright-line">
+        <span class="copyright-mark">&copy;</span>
+        <span>2026 AI Safety Corner</span>
+      </span>
+    </div>
+  </footer>
+
+  <!-- About drawer injected by nav.js -->
+
+  <script src="../main.js?v=3ce3eb6960"></script>
+  <script src="failures-data.js?v=00daa8b62b"></script>
+  <script src="failures-index.js?v=0d39c32197"></script>
+</body>
+</html>

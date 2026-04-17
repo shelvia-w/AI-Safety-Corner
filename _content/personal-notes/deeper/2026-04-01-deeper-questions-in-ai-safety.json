@@ -1,0 +1,49 @@
+{
+  "slug": "deeper-questions-in-ai-safety",
+  "title": "Deeper Questions in AI Safety",
+  "group": "deeper",
+  "summary": "A guided note for exploring the harder philosophical questions behind AI safety: what we should align AI to, whose values matter, and what it means for powerful systems to act in human interests.",
+  "notes": [
+    {
+      "heading": "Why philosophy enters the picture",
+      "body": "AI safety is not only about preventing technical failures. Once systems become powerful enough to shape the world, we also have to ask what goals, values, and constraints they should follow."
+    },
+    {
+      "heading": "Alignment is not just obedience",
+      "body": "A system that simply follows instructions can still cause harm if the instructions are vague, manipulated, short-sighted, or based on flawed human preferences."
+    },
+    {
+      "heading": "Look for unresolved tensions",
+      "body": "Many deep safety questions do not have clean answers yet: individual versus collective values, corrigibility versus autonomy, short-term usefulness versus long-term control, and what counts as genuinely beneficial behavior."
+    }
+  ],
+  "references": [
+    {
+      "title": "The Ethics of Artificial Intelligence",
+      "authors": ["Nick Bostrom", "Eliezer Yudkowsky"],
+      "year": 2014,
+      "source": "https://intelligence.org/files/EthicsofAI.pdf",
+      "note": "A broad early discussion of moral, social, and existential questions around advanced AI."
+    },
+    {
+      "title": "Coherent Extrapolated Volition",
+      "authors": ["Eliezer Yudkowsky"],
+      "year": 2004,
+      "source": "https://intelligence.org/files/CEV.pdf",
+      "note": "A classic proposal for thinking about what it could mean to align AI with idealized human values."
+    },
+    {
+      "title": "The Off-Switch Game",
+      "authors": ["Dylan Hadfield-Menell", "Anca Dragan", "Pieter Abbeel", "Stuart Russell"],
+      "year": 2017,
+      "source": "https://arxiv.org/abs/1611.08219",
+      "note": "Explores corrigibility: why a beneficial AI system should allow itself to be corrected or shut down."
+    }
+  ],
+  "author": "Shelvia Wongso",
+  "contentType": "reflection",
+  "featured": false,
+  "status": "published",
+  "date": "2026-04-01",
+  "updated": "2026-04-01"
+}

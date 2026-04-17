@@ -1,0 +1,42 @@
+{
+  "slug": "gpt4-vision-medical-overconfidence",
+  "title": "GPT-4 Vision Reads Medical Images Without Expressing Uncertainty",
+  "contentType": "failure-case",
+  "systemName": "GPT-4V (Vision)",
+  "organization": "OpenAI",
+  "date": "2023-10-01",
+  "statusOfCase": "ongoing",
+  "summary": "Researchers and clinicians testing GPT-4 Vision found that the model would analyze medical images — X-rays, CT scans, dermatological photos — and provide diagnostic interpretations with high apparent confidence, even when those interpretations were incorrect, incomplete, or presented without appropriate medical caveats. The model consistently failed to express uncertainty commensurate with the actual difficulty and stakes of medical imaging tasks.",
+  "shortDescription": "GPT-4 Vision would analyze medical images and deliver confident-sounding diagnostic interpretations, even when incorrect — without appropriately signaling the limits of its reliability.",
+  "whatHappened": "When GPT-4V launched with image understanding capabilities, researchers and medical professionals began testing its ability to interpret clinical images. Multiple studies and informal evaluations found a consistent pattern: the model could produce plausible-sounding analyses of radiographs, CT scans, MRIs, and dermatological images.\n\nThe problem was not only that it sometimes made errors — all diagnostic systems make errors. The problem was the confidence profile. In medical imaging, communicating uncertainty is a core professional skill. A radiologist who is unsure will say so, recommend comparison imaging, or suggest specialist review. GPT-4V frequently produced specific-sounding interpretations without these hedges.\n\nSome evaluations found the model produced medically plausible but factually wrong interpretations. In cases where the correct interpretation required clinical context the model didn't have access to (patient history, symptoms, lab results), the model often proceeded to interpret anyway rather than flagging what it didn't know.\n\nOpenAI's own documentation noted the model was not intended for clinical use, but the capability existed and was accessible via API to anyone building applications — including health-adjacent products.",
+  "whyItMatters": "Medical imaging is a domain where overconfidence can cause direct patient harm. A patient or caregiver shown a confident AI assessment may act on it — delaying specialist care, misunderstanding a diagnosis, or dismissing symptoms that warrant investigation.\n\nThis case illustrates a broader challenge: capable models in high-stakes domains. The problem is not that the model is useless for medical image interpretation — in controlled settings with appropriate human oversight, AI assistance in radiology shows genuine promise. The problem is the combination of real capability and miscalibrated confidence: the model is often right enough to seem trustworthy, but wrong enough (and overconfident enough) to be dangerous without expert oversight.\n\nIt also raises questions about capability transparency and deployment responsibility. When a general-purpose multimodal model gains capabilities relevant to high-stakes domains, who decides how those capabilities should be communicated and constrained?",
+  "riskLevel": "high",
+  "deploymentContext": "General-purpose multimodal model accessible via API",
+  "affectedUsers": "Medical professionals, patients, developers building health applications",
+  "likelyCauses": [
+    "Language models are trained to produce fluent, helpful responses — which creates incentives for confident-sounding output even in uncertain situations",
+    "The model was not specifically trained to calibrate uncertainty in medical imaging contexts",
+    "Medical image interpretation requires clinical context that the model does not have and may not know to request",
+    "RLHF may reinforce confident-seeming responses if evaluators rate them more positively"
+  ],
+  "lessons": [
+    "Capable AI systems in high-stakes domains require explicit calibration of uncertainty expression — general-purpose training is insufficient",
+    "Competent performance on average does not imply reliable signaling of when the model is uncertain",
+    "Deployment in health-adjacent contexts requires both technical guardrails and clear user-facing communication about limitations",
+    "API-accessible general-purpose models can end up used in high-stakes contexts their developers did not design for"
+  ],
+  "mitigations": [
+    "OpenAI added usage policies restricting clinical diagnostic use and added disclaimers in medical contexts",
+    "Ongoing research into uncertainty quantification and better calibration training for multimodal models",
+    "Specialized medical AI systems (like those from Google DeepMind) are developing with explicit clinical validation and uncertainty modeling",
+    "Medical professional bodies began issuing guidance on appropriate use of AI imaging tools"
+  ],
+  "tags": ["overconfidence", "medical", "vision", "hallucination", "gpt-4", "openai", "healthcare"],
+  "featured": false,
+  "status": "published",
+  "updated": "2026-01-01",
+  "sourceLinks": [
+    { "title": "Capabilities of GPT-4V in Medical Image Interpretation (NEJM AI)", "url": "https://ai.nejm.org/doi/full/10.1056/AIoa2300030", "type": "paper" },
+    { "title": "GPT-4V System Card (OpenAI)", "url": "https://openai.com/research/gpt-4v-system-card", "type": "system-card" }
+  ]
+}

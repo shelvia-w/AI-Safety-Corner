@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23C7F36B'>⬡</text></svg>" />
+  <title>Loading... - Personal Notes · AI Safety Corner</title>
+  <meta name="description" content="Personal Notes" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../styles.css?v=366f96b8dd" />
+  <link rel="stylesheet" href="notes.css?v=c3697140c9" />
+</head>
+<body>
+  <!-- Ambient canvas -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <!-- Top navigation injected by nav.js -->
+  <div id="site-nav"></div>
+  <script src="../nav.js?v=74bfacc0e2"></script>
+
+  <!-- Note detail page -->
+  <main class="cr-detail-page">
+    <div id="readingNotFound" class="cr-not-found" style="display: none;">
+      <div class="cr-not-found-glyph" aria-hidden="true">?</div>
+      <h1 class="cr-not-found-title">Note not found</h1>
+      <p class="cr-not-found-body">This note does not exist yet, or the link may be wrong.</p>
+      <a href="./index.html" class="cr-not-found-link">Back to all personal notes</a>
+    </div>
+
+    <article id="readingBody">
+      <div class="cr-detail-inner">
+        <a class="cr-back-link" href="./index.html">Personal Notes</a>
+
+        <header class="cr-detail-header">
+          <div class="cr-detail-eyebrow">
+            <span class="cr-detail-zone-tag">
+              <span class="cr-detail-zone-glyph" aria-hidden="true">II</span>
+              Personal Notes
+            </span>
+            <span id="readingTypeBadge"></span>
+          </div>
+
+          <h1 class="cr-detail-title" id="readingTitle">-</h1>
+          <div class="cr-detail-meta" id="readingMeta"></div>
+          <div class="cr-detail-reading" id="readingTime"></div>
+        </header>
+
+        <section class="cr-summary" aria-labelledby="readingSummaryLabel">
+          <div class="cr-summary-label" id="readingSummaryLabel">Summary</div>
+          <p class="cr-summary-text" id="readingSummary">-</p>
+        </section>
+
+        <div id="readingNotes"></div>
+
+        <section class="cr-section" id="readingReferencesSection">
+          <h2 class="cr-section-label">References</h2>
+          <div class="cr-references" id="readingReferences"></div>
+        </section>
+
+        <nav class="cr-nav" id="readingNav" aria-label="Navigate notes"></nav>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span class="copyright-line">
+        <span class="copyright-mark">©</span>
+        <span>2026 AI Safety Corner</span>
+      </span>
+    </div>
+  </footer>
+
+  <!-- About drawer injected by nav.js -->
+
+  <!-- Scripts -->
+  <script src="../main.js?v=3ce3eb6960"></script>
+  <script src="notes-data-start-here.js?v=bd4b30d800"></script>
+  <script src="notes-data-foundations.js?v=e564b24441"></script>
+  <script src="notes-data-deeper.js?v=bf98408f26"></script>
+  <script src="notes-data.js?v=098b743eb9"></script>
+  <script src="notes-detail.js?v=c310c495c6"></script>
+</body>
+</html>

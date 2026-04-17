@@ -1,0 +1,49 @@
+{
+  "slug": "foundational-ai-safety-papers",
+  "title": "Foundational AI Safety Papers",
+  "group": "foundations",
+  "summary": "A guided note for reading the papers that shaped how AI safety researchers think about alignment, robustness, objectives, and oversight.",
+  "notes": [
+    {
+      "heading": "Why these papers matter",
+      "body": "Foundational papers give you the basic problem frames that keep reappearing across AI safety: objective misspecification, distribution shift, scalable oversight, robustness, and alignment failure."
+    },
+    {
+      "heading": "Read for concepts, not completion",
+      "body": "You do not need to memorize every detail. Focus on the core ideas each paper introduced and how those ideas changed the way researchers talk about AI risk."
+    },
+    {
+      "heading": "Look for recurring patterns",
+      "body": "Many safety problems rhyme with each other. As you read, watch for repeated themes: proxies breaking under optimization, models behaving differently off-distribution, and oversight becoming harder as systems become more capable."
+    }
+  ],
+  "references": [
+    {
+      "title": "Concrete Problems in AI Safety",
+      "authors": ["Dario Amodei", "Chris Olah", "Jacob Steinhardt", "Paul Christiano", "John Schulman", "Dan Man\u00e9"],
+      "year": 2016,
+      "source": "https://arxiv.org/abs/1606.06565",
+      "note": "A clear starting point for framing AI safety as concrete technical problems."
+    },
+    {
+      "title": "Scalable Agent Alignment via Reward Modeling",
+      "authors": ["Jan Leike", "David Krueger", "Tom Everitt", "Miljan Martic", "Vishal Maini", "Shane Legg"],
+      "year": 2018,
+      "source": "https://arxiv.org/abs/1811.07871",
+      "note": "Introduces reward modeling as one route toward aligning systems when direct supervision becomes difficult."
+    },
+    {
+      "title": "Risks from Learned Optimization in Advanced Machine Learning Systems",
+      "authors": ["Evan Hubinger et al."],
+      "year": 2019,
+      "source": "https://arxiv.org/abs/1906.01820",
+      "note": "A key paper for understanding mesa-optimization and why trained models may develop internal objectives."
+    }
+  ],
+  "author": "Shelvia Wongso",
+  "contentType": "learning",
+  "featured": false,
+  "status": "published",
+  "date": "2026-04-01",
+  "updated": "2026-04-01"
+}

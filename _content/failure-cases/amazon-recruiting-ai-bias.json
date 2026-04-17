@@ -1,0 +1,41 @@
+{
+  "slug": "amazon-recruiting-ai-bias",
+  "title": "Amazon's Recruiting AI Penalized Women's Resumes",
+  "contentType": "failure-case",
+  "systemName": "Amazon Recruiting AI",
+  "organization": "Amazon",
+  "date": "2018-10-10",
+  "statusOfCase": "resolved",
+  "summary": "Amazon developed a machine learning system intended to automate candidate screening and reduce hiring bias. Instead, the system learned to replicate and amplify existing biases from the training data — notably penalizing resumes that included the word \"women's\" (as in \"women's chess club\") and downgrading graduates of all-women's colleges. The tool was trained on historical hiring decisions, which reflected the company's own prior biases. Amazon eventually scrapped the tool after internal teams determined it could not be made reliably fair.",
+  "shortDescription": "Amazon built an ML recruiting tool that learned to penalize resumes containing the word \"women's\" and to downgrade graduates from all-women's colleges — replicating historical hiring bias from its training data.",
+  "whatHappened": "Starting around 2014, Amazon assembled a team to build a machine learning model that could score and rank job candidates automatically, reducing the burden on human recruiters and theoretically introducing more consistency into the process.\n\nThe system was trained on resumes submitted to Amazon over a ten-year period and the outcomes associated with them — specifically, whether those candidates were hired. This is a standard approach to building a selection model: learn from historical decisions.\n\nThe problem: Amazon's historical hiring decisions were skewed. The tech industry, and Amazon's engineering workforce in particular, was predominantly male. The model learned that male-associated features correlated with positive hiring outcomes. It began penalizing resumes that mentioned words like \"women's\" — as in clubs, activities, or colleges that were women-oriented — and downrated graduates from two all-women's colleges.\n\nAmazon attempted to fix the bias by removing gender-specific words from the scoring criteria, but found that other proxies for gender (and for other protected characteristics) remained embedded in the model in ways that were difficult to fully remove. By 2018 they stopped using the tool for actual hiring decisions and ultimately abandoned the project.",
+  "whyItMatters": "The Amazon recruiting case illustrates the fundamental problem of training AI systems on historical data that reflects past discrimination: the model learns to replicate that discrimination because it is correlated with the outcome label it is trained to predict.\n\nThis is a structural challenge, not a simple bug. If the historical ground truth is biased, a model trained to predict that ground truth will inherit the bias — often in ways that are not transparent and are difficult to fully audit or remove.\n\nThe case also matters because it involved a consequential real-world application — hiring decisions affect people's livelihoods. And the irony is sharp: the system was deployed specifically with the stated goal of reducing bias, and instead it amplified it. Good intentions in deploying AI systems are not a substitute for rigorous bias auditing.",
+  "riskLevel": "high",
+  "deploymentContext": "Internal HR and recruiting tool, enterprise deployment",
+  "affectedUsers": "Job applicants, particularly women in tech",
+  "likelyCauses": [
+    "Training data reflected historical hiring decisions made in a male-dominated environment — the model learned to replicate those patterns",
+    "Outcome labels (hired / not hired) served as proxies for fit, but themselves encoded prior biases",
+    "Gender proxies in text (women's clubs, college names) correlated with the label and were learned as negative signals",
+    "Removing explicit gender terms did not remove subtler learned proxies for protected characteristics"
+  ],
+  "lessons": [
+    "Training on biased historical data produces biased models — historical outcomes are not a reliable ground truth for fairness-sensitive decisions",
+    "Bias in ML systems is often non-obvious and present in proxies rather than explicit features — comprehensive auditing requires more than checking for protected attributes directly",
+    "Good intentions are not a substitute for rigorous fairness evaluation before deployment",
+    "When bias cannot be reliably removed from a high-stakes system, the right answer may be not to deploy it"
+  ],
+  "mitigations": [
+    "Amazon abandoned the tool rather than deploy a system it could not make reliably fair",
+    "Amazon invested in alternative approaches to diversity in recruiting that do not rely on ML scoring of historical resumes",
+    "The case accelerated industry attention to algorithmic fairness and bias auditing in hiring tools",
+    "Regulatory bodies in multiple jurisdictions subsequently began requiring bias audits for automated hiring systems"
+  ],
+  "tags": ["bias", "discrimination", "hiring", "gender", "machine-learning", "amazon", "fairness"],
+  "featured": false,
+  "status": "published",
+  "updated": "2026-01-01",
+  "sourceLinks": [
+    { "title": "Amazon Scraps Secret AI Recruiting Tool That Showed Bias Against Women (Reuters)", "url": "https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G", "type": "article" }
+  ]
+}
