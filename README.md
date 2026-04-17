@@ -1,9 +1,11 @@
-## AI Safety Corner
+## Project Pulse
 
-![GitHub last commit](https://img.shields.io/github/last-commit/shelvia-w/AI-Safety-Corner)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/shelvia-w/AI-Safety-Corner)
-![GitHub repo size](https://img.shields.io/github/repo-size/shelvia-w/AI-Safety-Corner)
-![GitHub issues](https://img.shields.io/github/issues/shelvia-w/AI-Safety-Corner)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/shelvia-w/AI-Safety-Corner)
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=shelvia-w&repo=AI-Safety-Corner&theme=tokyo-night&hide_border=true" />
+</p>
 
-[![Repo Card](https://github-readme-stats.vercel.app/api/pin/?username=shelvia-w&repo=AI-Safety-Corner)](https://github.com/shelvia-w/AI-Safety-Corner)
+<p align="center">
+  <img src="https://img.shields.io/github/last-commit/shelvia-w/AI-Safety-Corner?style=for-the-badge&label=Last%20Update" />
+  <img src="https://img.shields.io/github/commit-activity/m/shelvia-w/AI-Safety-Corner?style=for-the-badge&label=Monthly%20Commits" />
+  <img src="https://img.shields.io/github/repo-size/shelvia-w/AI-Safety-Corner?style=for-the-badge" />
+</p>
