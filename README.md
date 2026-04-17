@@ -1,10 +1,1 @@
-## Activity
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=shelvia-w&repo=AI-Safety-Corner&theme=tokyo-night&hide_border=true" />
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/github/last-commit/shelvia-w/AI-Safety-Corner?style=for-the-badge&label=Last%20Update" />
-  <img src="https://img.shields.io/github/commit-activity/m/shelvia-w/AI-Safety-Corner?style=for-the-badge&label=Monthly%20Commits" />
-</p>
+![Alt](https://repobeats.axiom.co/api/embed/251e45a8a486428ba01a1cd6d949675b1a2b59e3.svg "Repobeats analytics image")
