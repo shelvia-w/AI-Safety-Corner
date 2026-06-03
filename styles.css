@@ -117,7 +117,7 @@ button {
   align-items: center;
   gap: 0.45rem;
   font-family: var(--font-mono);
-  font-size: 0.67rem;
+  font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--ink-secondary);
@@ -125,7 +125,7 @@ button {
 }
 .nav-logo:hover { color: var(--accent-lavender); }
 .logo-glyph {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--accent-lavender);
   filter: drop-shadow(0 0 6px var(--accent-lavender));
 }
@@ -137,7 +137,7 @@ button {
 }
 
 .nav-link {
-  font-size: 0.67rem;
+  font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -172,7 +172,7 @@ button {
   border-radius: 2px;
   background: transparent;
   color: var(--accent-lavender);
-  font-size: 0.67rem;
+  font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -184,7 +184,7 @@ button {
   border-color: var(--accent-lavender);
   color: var(--ink-primary);
 }
-.btn-arrow { font-size: 0.72rem; transition: transform 0.2s; }
+.btn-arrow { font-size: 0.82rem; transition: transform 0.2s; }
 .nav-about-btn:hover .btn-arrow { transform: translateX(3px); }
 
 /* ─── Hero ─────────────────────────────────────────────────── */
