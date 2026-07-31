@@ -19,11 +19,16 @@
   ],
   "references": [
     {
-      "title": "Concrete Problems in AI Safety",
-      "authors": ["Dario Amodei", "Chris Olah", "Jacob Steinhardt", "Paul Christiano", "John Schulman", "Dan Man\u00e9"],
-      "year": 2016,
-      "source": "https://arxiv.org/abs/1606.06565",
-      "note": "A clear starting point for framing AI safety as concrete technical problems."
+      "title": "Yoshua Bengio on AI Safety",
+      "authors": ["Yoshua Bengio"],
+      "source": "https://www.youtube.com/watch?v=luJxOyryJ0o",
+      "note": "A talk on the importance of understanding and addressing AI safety as systems become more capable."
+    },
+    {
+      "title": "Pause Giant AI Experiments",
+      "authors": ["Future of Life Institute"],
+      "source": "https://futureoflife.org/open-letter/pause-giant-ai-experiments/",
+      "note": "An open letter calling for a pause on giant AI experiments while safety protocols are developed."
     },
     {
       "title": "Scalable Agent Alignment via Reward Modeling",

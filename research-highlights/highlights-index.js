@@ -125,7 +125,8 @@
 
   /* ─── Filter logic ───────────────────────────────────────── */
   function getFiltered() {
-    let papers = getSortedPaperHighlights();
+    // Keep the section available for navigation while its content is being prepared.
+    let papers = [];
 
     if (state.search) {
       const q = state.search;

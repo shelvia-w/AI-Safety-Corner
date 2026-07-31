@@ -15,11 +15,10 @@
   ],
   "references": [
     {
-      "title": "Concrete Problems in AI Safety",
-      "authors": ["Dario Amodei", "Chris Olah", "Jacob Steinhardt", "Paul Christiano", "John Schulman", "Dan Man\u00e9"],
-      "year": 2016,
-      "source": "https://arxiv.org/abs/1606.06565",
-      "note": "Good starting point for framing AI safety as practical engineering problems."
+      "title": "Yoshua Bengio on AI Safety",
+      "authors": ["Yoshua Bengio"],
+      "source": "https://www.youtube.com/watch?v=luJxOyryJ0o",
+      "note": "A talk on the importance of understanding and addressing AI safety as systems become more capable."
     }
   ],
   "author": "Shelvia Wongso",

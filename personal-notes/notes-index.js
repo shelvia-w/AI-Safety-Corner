@@ -15,17 +15,7 @@
     {
       id: 'start-here',
       title: 'Start Here',
-      desc: 'Simple introductions to AI safety - no deep technical background needed.',
-    },
-    {
-      id: 'foundations',
-      title: 'Build Your Foundations',
-      desc: 'Core concepts and skills every AI safety researcher should know.',
-    },
-    {
-      id: 'deeper',
-      title: 'Go Deeper',
-      desc: 'More technical or nuanced pieces for readers ready to move beyond the basics.',
+      desc: 'Simple introductions to AI safety.',
     },
   ];
 
@@ -66,15 +56,29 @@
   function init() {
     if (typeof CORE_READINGS === 'undefined' || !Array.isArray(CORE_READINGS)) return;
 
+    updateAvailableTypePills();
     updateTotalCount();
     bindEvents();
     render();
   }
 
+  function updateAvailableTypePills() {
+    const availableTypes = new Set(
+      CORE_READINGS
+        .filter(reading => reading.group === 'start-here')
+        .map(reading => reading.contentType)
+        .filter(Boolean)
+    );
+
+    typePills.forEach(pill => {
+      pill.hidden = !availableTypes.has(pill.dataset.type);
+    });
+  }
+
   function updateTotalCount() {
     if (!totalCountEl) return;
 
-    const total = CORE_READINGS.length;
+    const total = CORE_READINGS.filter(reading => reading.group === 'start-here').length;
     totalCountEl.textContent = formatCount(total, 'note');
   }
 
@@ -153,6 +157,7 @@
 
   function getFilteredReadings() {
     return CORE_READINGS.filter(reading => {
+      if (reading.group !== 'start-here') return false;
       return matchesSearch(reading) && matchesType(reading);
     });
   }

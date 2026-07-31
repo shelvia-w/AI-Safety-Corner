@@ -109,7 +109,7 @@
             <p class="drawer-text">
               AI Safety Corner started as a personal project to dive deeper into AI safety research.
               Along the way, I thought, why not share some of what I'm learning too?
-              It isn't affiliated with any lab or research institution — just one person's attempt
+              It isn't affiliated with any lab or research institution, just one person's attempt
               to curate, explain, and explore a field that matters deeply to our future.
             </p>
           </div>

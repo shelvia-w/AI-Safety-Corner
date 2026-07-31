@@ -134,7 +134,8 @@
 
   /* ─── Filter logic ───────────────────────────────────────── */
   function getFilteredCards() {
-    let cards = [...SYSTEM_CARDS];
+    // Keep the section available for navigation while its content is being prepared.
+    let cards = [];
 
     /* Search */
     if (state.search) {

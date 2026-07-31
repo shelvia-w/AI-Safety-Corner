@@ -115,7 +115,8 @@
   }
 
   function getFilteredTerms() {
-    let terms = [...GLOSSARY_TERMS];
+    // Keep the section available for navigation while its content is being prepared.
+    let terms = [];
 
     if (state.search) {
       const query = state.search;
