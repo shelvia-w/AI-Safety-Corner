@@ -184,6 +184,11 @@ button {
   font-size: 0.74rem;
 }
 
+/* Keep the homepage hero focused on the main guide entry point. */
+#hero-highlight-link {
+  display: none;
+}
+
 .nav-about-btn {
   display: flex;
   align-items: center;
@@ -1156,13 +1161,13 @@ button {
   .site-nav {
     padding-inline: 1.25rem;
   }
-  .nav-logo { font-size: 0.6rem; }
-  .logo-glyph { font-size: 0.82rem; }
-  .nav-links { gap: 0.5rem; }
+  .nav-logo { font-size: 0.64rem; }
+  .logo-glyph { font-size: 0.86rem; }
+  .nav-links { gap: 0.6rem; }
   .nav-link,
-  .nav-about-btn { font-size: 0.52rem; }
-  .nav-about-btn { padding: 0.26rem 0.55rem; }
-  .btn-arrow { font-size: 0.68rem; }
+  .nav-about-btn { font-size: 0.56rem; }
+  .nav-about-btn { padding: 0.28rem 0.6rem; }
+  .btn-arrow { font-size: 0.7rem; }
 
   .hero-title { font-size: clamp(2.8rem, 8vw, 4.5rem); }
 
