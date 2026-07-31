@@ -163,27 +163,6 @@ button {
   border-bottom-color: rgba(197, 184, 245, 0.1);
 }
 
-/* Compact the navigation after the page starts scrolling. */
-.site-nav.is-scrolled .nav-logo {
-  font-size: 0.7rem;
-}
-.site-nav.is-scrolled .logo-glyph {
-  font-size: 0.92rem;
-}
-.site-nav.is-scrolled .nav-links {
-  gap: 0.8rem;
-}
-.site-nav.is-scrolled .nav-link,
-.site-nav.is-scrolled .nav-about-btn {
-  font-size: 0.62rem;
-}
-.site-nav.is-scrolled .nav-about-btn {
-  padding: 0.3rem 0.7rem;
-}
-.site-nav.is-scrolled .btn-arrow {
-  font-size: 0.74rem;
-}
-
 /* Keep the homepage hero focused on the main guide entry point. */
 #hero-highlight-link {
   display: none;
