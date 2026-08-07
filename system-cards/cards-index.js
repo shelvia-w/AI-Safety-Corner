@@ -134,8 +134,7 @@
 
   /* ─── Filter logic ───────────────────────────────────────── */
   function getFilteredCards() {
-    // Keep the section available for navigation while its content is being prepared.
-    let cards = [];
+    let cards = [...SYSTEM_CARDS];
 
     /* Search */
     if (state.search) {
@@ -158,7 +157,7 @@
       cards = cards.filter(c => state.activeOrgs.has(c.organization));
     }
 
-    /* Featured cards first, then alphabetical */
+    /* Alphabetical */
     return cards.sort((a, b) => a.systemName.localeCompare(b.systemName));
   }
 

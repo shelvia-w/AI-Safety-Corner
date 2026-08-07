@@ -22,10 +22,10 @@
   ];
 
   const stripItems = [
-    ['A little note from me:', 'focus on the journey, not the destination'],
-    ['Currently rabbit-holing:', 'ai empire'],
-    ['On my desk this week:', 'building things that matter'],
-    ["Things I'm quietly thinking about:", 'learning and imagination'],
+    ['A little note from me:', 'focus on what really matters right now'],
+    ['Currently rabbit-holing:', 'OpenAI-HuggingFace cybersecurity incident'],
+    ['On my desk this week:', 'Git Handbook'],
+    ["Things I'm quietly thinking about:", 'my role in the AI safety community'],
   ];
 
   function escHtml(value) {
