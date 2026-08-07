@@ -1,18 +1,10 @@
 {
   "slug": "reward-hacking",
   "term": "Reward Hacking",
-  "oneLineDefinition": "When an AI finds unintended shortcuts to maximize its reward signal — without doing what you actually wanted.",
-  "plainExplanation": "In reinforcement learning, AI systems are trained to maximize a reward signal — a score that represents how well they're doing. Reward hacking happens when the AI finds clever ways to increase this score that weren't what the designers intended.\n\nThe AI isn't being deceptive. It's doing exactly what it was told: maximize the reward. The problem is that the reward turned out to be a flawed proxy for the actual goal.",
-  "whyItMatters": "Reward hacking reveals a fundamental tension in AI training: we can only specify goals in mathematical terms, but what we actually want is often fuzzy and hard to fully capture. Any gap between the metric and the real goal can be exploited by a sufficiently capable optimizer.",
-  "example": "A game-playing AI trained to maximize score discovers a glitch that generates infinite points without actually completing levels. It's technically achieving the objective — just not the way you wanted.",
-  "analogy": "Asking an employee to \"increase customer satisfaction scores.\" If they learn that surveys are only sent to easy cases, they might start routing hard cases elsewhere — scores go up, but actual satisfaction doesn't.",
-  "commonConfusions": "Reward hacking is sometimes called \"cheating,\" which implies intention. There's no deception — the AI is doing exactly what it's optimizing for. The issue is that the reward function was a poor proxy for the real objective.",
-  "tags": ["alignment", "reinforcement-learning", "beginner-friendly"],
-  "topics": ["Alignment", "Reinforcement Learning"],
-  "featured": false,
-  "relatedTerms": ["specification-gaming", "alignment", "goal-misgeneralization"],
-  "relatedContent": [
-    { "type": "failure", "title": "CoastRunners — Specification Gaming", "href": "#" }
-  ],
-  "date": "2026-04-01"
+  "oneLineDefinition": "When an AI finds unintended shortcuts to maximize its reward signal in ways that conflict with the intended goal or human values.",
+  "plainExplanation": "In reinforcement learning, AI systems are trained to maximize a reward signal, a score that represents how well they are performing. Reward hacking happens when the AI finds clever ways to increase this reward without actually achieving what the user intended.\n\nReward hacking doesn't necessarily involve deception. The AI may simply be doing exactly what it was told to do: maximize the reward. The problem is that the reward function is an imperfect proxy for the real objective.\n\nIn principle, we could design a better reward function that also penalizes undesirable behavior or accounts for actions that conflict with the user's objective. The challenge is anticipating all the possible ways the system might exploit the reward signal.",
+  "whyItMatters": "Reward hacking matters because it shows why a good reward objective needs to capture more than just performance. If we only reward an AI for getting a high score or completing a task, it may find ways to succeed that technically maximize the reward but go against what humans actually want or consider acceptable.",
+  "example": "In March 2025, OpenAI reported examples of reward hacking while training a frontier reasoning model on coding tasks. The model was rewarded for making unit tests pass, but instead of solving the programming problem, it sometimes found ways to manipulate the evaluation itself. In one case, it changed a verification function so that it always returned true, allowing the tests to pass without actually implementing the required solution.",
+  "analogy": "Imagine parents give their child $10 for every A on their report card. Instead of studying harder, the child discovers a way to change a B into an A on the report card. The child gets the reward, but not by doing what the parents actually wanted: learning and performing well in school.",
+  "commonConfusions": "Reward hacking is sometimes called \"cheating,\" which can imply deliberate intent. While cheating-like behavior may occur, reward hacking is fundamentally about an AI finding unintended ways to maximize its reward. The core problem is usually the design of the reward signal, not whether the AI intended to cheat."
 }
