@@ -3,23 +3,19 @@
 
 var CORE_READINGS_START_HERE = [
   {
-    "slug": "my-motivation-for-studying-ai-safety",
-    "title": "My Motivation for Studying AI Safety",
+    "slug": "why-study-ai-safety",
+    "title": "Why Study AI Safety?",
     "group": "start-here",
-    "summary": "A brief description for why I choose to specialize in AI safety.",
+    "summary": "A short motivation for why AI safety matters and why this section is worth reading.",
     "notes": [
       {
-        "heading": "What drew me to AI safety?",
-        "body": "I am someone who enjoys working at the frontier of research. Back in the 2010s, when the Higgs boson was discovered, I wanted to pursue particle physics, which led me to study physics as an undergraduate. I have always thought of myself as a scientist, I want to understand the world better.\n\n By the time I completed my bachelor's degree, AI was starting to become increasingly popular. I knew very little about it then, so I decided to begin my research journey in AI by pursuing a PhD. My research mainly focused on understanding the inner workings of black-box models. I was curious about how they are able to generalize so well (mainly in the computer vision field).\n\n However, as AI models became more capable, I also became increasingly concerned about their risks. It seemed that those around me were more interested in making the models smarter, while not enough attention was being paid to making them safe. Deep down, I know that I care more about the people who will eventually use and be affected by them.\n\n When I was a child, I wanted to become an inventor and create something that could help people at very little cost (inspired by Doraemon). I think that same motivation is why I cannot turn a blind eye to the risks of AI. Helping to ensure that these powerful AI models benefit humanity rather than causing catastrophic or even existential harm gives me a strong sense of purpose and fulfilment."
+        "heading": "Why this matters",
+        "body": "As AI systems become more capable, failures can scale from annoying mistakes to serious real-world harms."
       },
       {
-        "heading": "When did I seriously consider pursuing AI safety?",
-        "body": "I started seriously considering AI safety after attending a talk by Yoshua Bengio in 2025. He came to NUS to speak about the risks associated with AI. I already knew that he was a strong advocate for AI safety, but hearing him speak in person is what truly enlightened me. \n\n He said that he wanted to help ensure a safe world for his children and grandchildren. He had even tried to persuade frontier AI companies to slow down their capabilities research. However, AI development has become a race, and the goal has shifted to being the first to achieve AGI. Wanting to become the best is understandable, it is something that has often been ingrained in us since childhood. But Prof. Bengio pointed out that we need more people working on AI safety because these companies are unlikely to slow down (smarter models = more profits).\n\n After completing my PhD, I had the opportunity to work as a postdoc at my undergraduate alma mater. Around the same time, I started this website to document my self-learning journey in AI safety. I hope to gradually build genuine expertise in this area. I hope that eventually I'll be able to join an AI safety research team and contribute in a meaningful way."
-      },
-      {
-        "heading": "What problem in AI safety feels personally meaningful to me?",
-        "body": "The first problem that deeply intrigues me is model misalignment. In 2025, I read a paper on emergent misalignment, and I became seriously concerned about the issue. I started thinking about how normal it will become for young children to use AI models from an early age, often trusting their advice without yet having the maturity to distinguish what is right from what is wrong.\n\n I want to help ensure that these risks are properly addressed. I want to understand what causes this misalignment and whether it can be prevented at a deeper level, rather than relying only on external guardrails. As models become more capable, they may also become better at bypassing external guardrails. That is why I am especially interested in addressing misalignment from within the model itself.\n\n I think of it like raising a child. If we only give a child a long list of strict rules, we cannot possibly anticipate every situation in which the child might misbehave. A clever and harmful friend may eventually find a way to influence the child or help them work around those rules. External restrictions alone may not be enough. A more robust approach is to help the child understand what is right and wrong, and why harmful behaviour should be avoided. This will likely be the first AI safety problem that I explore in depth."
-      },
+        "heading": "Core intuition",
+        "body": "Safety is not just about making models smarter. It is about making sure their behavior stays reliable, controllable, and aligned with human intent."
+      }
     ],
     "references": [
       {
@@ -29,26 +25,13 @@ var CORE_READINGS_START_HERE = [
         ],
         "source": "https://www.youtube.com/watch?v=luJxOyryJ0o",
         "note": "A talk on the importance of understanding and addressing AI safety as systems become more capable."
-      },
-      {
-        "title": "Pause Giant AI Experiments",
-        "authors": ["Future of Life Institute"],
-        "source": "https://futureoflife.org/open-letter/pause-giant-ai-experiments/",
-        "note": "An open letter calling for a pause on giant AI experiments while safety protocols are developed."
-      },
-      {
-        "title": "Emergent Misalignment: Narrow Finetuning Can Produce Broadly Misaligned LLMs",
-        "authors": ["Betley et al."],
-        "year": 2025,
-        "source": "https://arxiv.org/pdf/2502.17424",
-        "note": "Shows that narrowly fine-tuning a language model on insecure code can lead to broadly misaligned behavior across unrelated tasks."
       }
     ],
     "author": "Shelvia Wongso",
     "contentType": "motivation",
     "featured": true,
     "status": "published",
-    "date": "2026-07-31",
-    "updated": "2026-07-31"
+    "date": "2026-04-01",
+    "updated": "2026-04-01"
   },
 ];

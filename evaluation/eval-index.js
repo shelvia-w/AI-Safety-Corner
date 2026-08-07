@@ -150,8 +150,7 @@
 
   // Filtering
   function getFilteredEntries() {
-    // Keep the section available for navigation while its content is being prepared.
-    let entries = [];
+    let entries = [...EVAL_ENTRIES];
 
     if (state.search) {
       const query = state.search;

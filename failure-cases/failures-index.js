@@ -95,8 +95,7 @@
   }
 
   function getFilteredCases() {
-    // Keep the section available for navigation while its content is being prepared.
-    let cases = [];
+    let cases = [...FAILURE_CASES];
 
     if (state.search) {
       const query = state.search;

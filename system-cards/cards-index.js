@@ -34,7 +34,7 @@
   function init() {
     /* Total count */
     if (totalCountEl) {
-      totalCountEl.textContent = `${SYSTEM_CARDS.length} model${SYSTEM_CARDS.length === 1 ? '' : 's'}`;
+      totalCountEl.textContent = '0 models';
     }
 
     buildOrgFilters();

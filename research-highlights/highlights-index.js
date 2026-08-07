@@ -34,7 +34,7 @@
   /* ─── Boot ───────────────────────────────────────────────── */
   function init() {
     if (paperCountEl) {
-      const n = PAPER_HIGHLIGHTS.length;
+      const n = 0;
       paperCountEl.textContent = `${n} highlight${n !== 1 ? 's' : ''}`;
     }
     buildTopicFilters();

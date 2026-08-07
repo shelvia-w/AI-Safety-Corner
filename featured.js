@@ -65,7 +65,8 @@
   }
 
   function renderCounts() {
-    const coreReadings = getGlobalList('CORE_READINGS');
+    const coreReadings = getGlobalList('CORE_READINGS')
+      .filter(reading => reading.group === 'start-here');
     const highlights = getGlobalList('PAPER_HIGHLIGHTS');
     const failures = getGlobalList('FAILURE_CASES');
     const evaluations = getGlobalList('EVAL_ENTRIES');
@@ -73,11 +74,11 @@
     const systemCards = getGlobalList('SYSTEM_CARDS');
 
     setCount('coreReadingsHomeCount', coreReadings.length, 'note', 'notes');
-    setCount('researchHighlightsHomeCount', highlights.length, 'highlight', 'highlights');
-    setCount('failureCasesHomeCount', failures.length, 'case', 'cases');
+    setCount('researchHighlightsHomeCount', 0, 'highlight', 'highlights');
+    setCount('failureCasesHomeCount', 0, 'case', 'cases');
     setCount('evaluationHomeCount', evaluations.length, 'entry', 'entries');
     setCount('glossaryHomeCount', glossaryTerms.length, 'term', 'terms');
-    setCount('systemCardsHomeCount', systemCards.length, 'model', 'models');
+    setCount('systemCardsHomeCount', 0, 'model', 'models');
   }
 
   function renderFeaturedHighlight() {
