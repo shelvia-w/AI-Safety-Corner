@@ -23,9 +23,9 @@
 
   const stripItems = [
     ['A little note from me:', 'focus on what really matters right now'],
-    ['Currently rabbit-holing:', 'OpenAI-HuggingFace cybersecurity incident'],
-    ['On my desk this week:', 'Git Handbook'],
-    ["Things I'm quietly thinking about:", 'my role in the AI safety community'],
+    ['Currently rabbit-holing:', 'preference learning'],
+    ['On my desk this week:', 'Machine Learning: A Probabilistic Perspective'],
+    ["Things I'm quietly thinking about:", 'slowing down AI development'],
   ];
 
   function escHtml(value) {

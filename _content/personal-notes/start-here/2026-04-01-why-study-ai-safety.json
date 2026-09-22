@@ -6,7 +6,7 @@
   "notes": [
     { 
       "heading": "What drew me to AI safety?",
-      "body": "I am someone who enjoys working at the frontier of research. Back in the 2010s, when the Higgs boson was discovered, I wanted to pursue particle physics, which led me to study physics as an undergraduate. I have always thought of myself as a scientist, I want to understand the world better.\n\n By the time I completed my bachelor's degree, AI was starting to become increasingly popular. I knew very little about it then, so I decided to begin my research journey in AI by pursuing a PhD. My research mainly focused on understanding the inner workings of black-box models. I was curious about how they are able to generalize so well (mainly in the computer vision field).\n\n However, as AI models became more capable, I also became increasingly concerned about their risks. It seemed that those around me were more interested in making the models smarter, while not enough attention was being paid to making them safe. Deep down, I know that I care more about the people who will eventually use and be affected by them.\n\n When I was a child, I wanted to become an inventor and create something that could help people at very little cost (inspired by Doraemon). I think that same motivation is why I cannot turn a blind eye to the risks of AI. Helping to ensure that these powerful AI models benefit humanity rather than causing catastrophic or even existential harm gives me a strong sense of purpose and fulfilment."
+      "body": "I am someone who enjoys working at the frontier of research. Back in the 2010s, when the Higgs boson was discovered, I wanted to pursue particle physics, which led me to study physics as an undergraduate. I have always thought of myself as a scientist, I want to understand the world better.\n\n By the time I completed my bachelor's degree, AI was starting to become increasingly popular. I knew very little about it then, so I decided to begin my research journey in AI by pursuing a PhD. My research mainly focused on understanding the inner workings of black-box models. I was curious about how they are able to generalize so well (mainly in the computer vision field).\n\n However, as AI models became more capable, I also became increasingly concerned about their risks. It seemed that people were more interested in making the models smarter, while not enough attention was being paid to making them safer. I thought of the people I care about who could be negatively affected by AI, and I knew I wanted to do something to help prevent that.\n\n When I was a child, I wanted to become an inventor and create something that could help people at very little cost (inspired by Doraemon). I think that same motivation is why I cannot turn a blind eye to the risks of AI. Helping to ensure that these powerful AI models benefit humanity rather than causing catastrophic or even existential harm gives me a strong sense of purpose and fulfilment."
     },
     { 
       "heading": "When did I seriously consider pursuing AI safety?",
@@ -23,6 +23,13 @@
       "authors": ["Yoshua Bengio"],
       "source": "https://www.youtube.com/watch?v=luJxOyryJ0o",
       "note": "A talk on the importance of understanding and addressing AI safety as systems become more capable."
+    },
+    {
+      "title": "Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs",
+      "authors": ["Jan Betley", "Daniel Chee Hian Tan", "Niels Warncke", "Anna Sztyber-Betley", "Xuchan Bao", "Martín Soto", "Nathan Labenz", "Owain Evans"],
+      "year": 2025,
+      "source": "https://arxiv.org/abs/2502.17424",
+      "note": "Shows how fine-tuning a model to generate insecure code can lead to misaligned behaviour on unrelated tasks."
     }
   ],
   "author": "Shelvia Wongso",
