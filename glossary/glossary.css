@@ -586,7 +586,7 @@
 }
 
 .term-definition-text {
-  font-size: 0.98rem;
+  font-size: 0.925rem;
   color: var(--ink-primary);
   line-height: 1.72;
   max-width: none;
@@ -623,7 +623,7 @@
 }
 
 .term-prose {
-  font-size: 0.925rem;
+  font-size: 0.875rem;
   color: var(--ink-secondary);
   line-height: 1.8;
 }
